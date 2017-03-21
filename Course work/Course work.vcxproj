@@ -23,7 +23,9 @@
     <ClCompile Include="Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Book.h" />
     <ClInclude Include="FictionBook.h" />
+    <ClInclude Include="Libraryh.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="SchoolBook.h" />
   </ItemGroup>
