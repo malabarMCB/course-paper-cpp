@@ -4,11 +4,17 @@
 class SchoolBook:public Book
 {
 	private:
-		string topic;
+		char *subject;
 		int classNumber;
 
 	public:
-		SchoolBook(string name, string topic, int classNumber);		
-		string GetInfo();
-		void Show();
+		SchoolBook(char *name, char *author, int pages, char *subject, int classNum);
+
+		~SchoolBook();
+
+		char * GetSubject() const;
+
+		int GetClassNumber() const;
+
+		void Show() const;
 };

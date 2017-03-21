@@ -1,16 +1,22 @@
 #pragma once
-#include <string>
-using namespace std;
 
 class Book
 {
 	protected:
-		string name;
+		char *name;
+		char *author;
+		int pageCount;
 
 	public:
-		Book(string name);
-		string GetName();
+		Book(char *name, char *author, int pageCount);
 
-		virtual string GetInfo();
-		virtual void Show();
+		~Book();
+
+		char *GetName() const;
+
+		char *GetAutor() const;
+
+		int GetPageCount() const;
+
+		virtual void Show() const;
 };

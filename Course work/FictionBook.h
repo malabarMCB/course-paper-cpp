@@ -3,11 +3,15 @@
 class FictionBook: public Book
 {
 	private:
-		string author;
-		int publishingYear;
+		char *genre;
+		int chapterCount;
 
 	public:
-		FictionBook(string name, string author, int publishingYear);
-		string GetInfo();
-		void Show();
+		FictionBook(char *name, char *author, int pages, char *genre, int chapters);
+
+		char *GetGenre() const;
+
+		int GetChapterCount() const;
+
+		void Show() const;
 };

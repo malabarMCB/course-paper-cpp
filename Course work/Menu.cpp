@@ -17,7 +17,7 @@ void Menu::Run()
 		cout << "<5>. Save to file" <<endl;
 		cout << "<6>. Load from the file" <<endl;
 		cout << "<7>. Sort objects" <<endl;
-		cout << "<8>. Do request" <<endl;
+		cout << "<8>. Make request" <<endl;
 		cout << "<9>. Leave the program" <<endl;
 
 		cin.getline(s, 10);
@@ -27,63 +27,63 @@ void Menu::Run()
 			case 1:
 			{
 				system("cls");
-				/*create_passenger();*/
+				this->CreateSchoolBook();
 				system("pause");
 				break;
 			}
 			case 2:
 			{
 				system("cls");
-				/*create_freight();*/
+				this->CreateFictionBook();
 				system("pause");
 				break;
 			}
 			case 3:
 			{
 				system("cls");
-				/*show_some();*/
+				this->ShowLibrary();
 				system("pause");
 				break;
 			}
 			case 4:
 			{
 				system("cls");
-				/*remove_some();*/
+				this->RemoveLibrary();
 				system("pause");
 				break;
 			}
 			case 5:
 			{
 				system("cls");
-				/*save_file();*/
+				this->WriteToFile();
 				system("pause");
 				break;
 			}
 			case 6:
 			{
 				system("cls");
-				/*load_from_file();*/
+				this->ReadFormFile();
 				system("pause");
 				break;
 			}
 			case 7:
 			{
 				system("cls");
-				/*sort_objects();*/
+				this->SortBooks();
 				system("pause");
 				break;
 			}
 			case 8:
 			{
 				system("cls");
-				/*do_request();*/
+				this->MakeRequest();
 				system("pause");
 				break;
 			}
 			case 9:
 			{
 				system("cls");
-				/*leave_program();*/
+				//TODO add exit
 				system("pause");
 				break;
 			}

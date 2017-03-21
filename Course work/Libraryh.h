@@ -5,5 +5,5 @@ class Library
 {
 	private:
 	public:
-
+		
 };

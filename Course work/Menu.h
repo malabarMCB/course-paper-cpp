@@ -6,19 +6,19 @@ class Menu
 	private:
 		void CreateSchoolBook();
 
-		void FictionBook();
+		void CreateFictionBook();
 
-		void ShowLibrary(Library *library);
+		void ShowLibrary();
 
-		void RemoveLibrary(Library *library);
+		void RemoveLibrary();
 
-		int WriteToFile(Library &library);
+		int WriteToFile();
 
-		int ReadFormFile(Library *library);
+		int ReadFormFile();
 
-		void SortBooks(Library *library);
+		void SortBooks();
 
-		void DoRequest(Library *library);
+		void MakeRequest();
 
 	public:
 		void Run();
