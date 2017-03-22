@@ -1,15 +1,18 @@
 #pragma once
 #include "Book.h"
+
 class FictionBook: public Book
 {
 	private:
-		char *genre;
+		string genre;
 		int chapterCount;
 
 	public:
-		FictionBook(char *name, char *author, int pages, char *genre, int chapters);
+		FictionBook(string name, string author, int pages, string genre, int chapters);
 
-		char *GetGenre() const;
+		~FictionBook();
+
+		string GetGenre() const;
 
 		int GetChapterCount() const;
 

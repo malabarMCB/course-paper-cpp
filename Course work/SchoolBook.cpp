@@ -1,10 +1,17 @@
 #include "SchoolBook.h"
-#include "iostream"
 using namespace std;
 
-//TODO add cunstructor and destructor
+SchoolBook::SchoolBook(string name, string author, int pages, string subject, int classNum)
+{
 
-char * SchoolBook::GetSubject() const
+}
+
+SchoolBook::~SchoolBook()
+{
+
+}
+
+string SchoolBook::GetSubject() const
 {
 	return this->subject;
 }

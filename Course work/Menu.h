@@ -4,11 +4,14 @@
 class Menu
 {
 	private:
+
+		Library *library;
+
 		void CreateSchoolBook();
 
 		void CreateFictionBook();
 
-		void ShowLibrary();
+		void ShowLibrary() const;
 
 		void RemoveLibrary();
 
@@ -21,5 +24,9 @@ class Menu
 		void MakeRequest();
 
 	public:
+		Menu();
+
+		~Menu();
+
 		void Run();
 };

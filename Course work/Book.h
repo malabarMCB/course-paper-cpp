@@ -1,20 +1,22 @@
 #pragma once
+#include "iostream"
+using namespace std;
 
 class Book
 {
 	protected:
-		char *name;
-		char *author;
+		string name;
+		string author;
 		int pageCount;
 
 	public:
-		Book(char *name, char *author, int pageCount);
+		Book(string name, string author, int pageCount);
 
 		~Book();
 
-		char *GetName() const;
+		string GetName() const;
 
-		char *GetAutor() const;
+		string GetAutor() const;
 
 		int GetPageCount() const;
 

@@ -19,8 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Book.cpp" />
+    <ClCompile Include="FictionBook.cpp" />
+    <ClCompile Include="Librarycpp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="SchoolBook.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />

@@ -4,15 +4,15 @@
 class SchoolBook:public Book
 {
 	private:
-		char *subject;
+		string subject;
 		int classNumber;
 
 	public:
-		SchoolBook(char *name, char *author, int pages, char *subject, int classNum);
+		SchoolBook(string name, string author, int pages, string subject, int classNum);
 
 		~SchoolBook();
 
-		char * GetSubject() const;
+		string GetSubject() const;
 
 		int GetClassNumber() const;
 

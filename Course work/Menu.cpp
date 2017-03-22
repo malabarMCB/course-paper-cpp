@@ -1,6 +1,59 @@
 #include "Menu.h"
-#include "iostream"
-using namespace std;
+
+Menu::Menu()
+{
+	this->library = new Library();
+}
+
+Menu::~Menu()
+{
+	delete library;
+}
+
+void Menu::CreateSchoolBook()
+{
+	cout << "Enter parameters";
+	//library->Push();
+}
+
+void Menu::CreateFictionBook()
+{
+	cout << "Enter parameters";
+	//library->Push();
+}
+
+void Menu::ShowLibrary() const
+{
+	library->Show();
+}
+
+void Menu::RemoveLibrary()
+{
+	library->Clean();
+}
+
+int Menu::WriteToFile()
+{
+	cout << "Library serizlized";
+	return 1;
+}
+
+int Menu::ReadFormFile()
+{
+	cout << "Library deserialized";
+	return 1;
+}
+
+void Menu::SortBooks()
+{
+	cout << "Sorted";
+	library->Sort();
+}
+
+void Menu::MakeRequest()
+{
+	library->PrintShoolbooksWithTopic("test topic");
+}
 
 void Menu::Run()
 {
@@ -27,63 +80,63 @@ void Menu::Run()
 			case 1:
 			{
 				system("cls");
-				this->CreateSchoolBook();
+				CreateSchoolBook();
 				system("pause");
 				break;
 			}
 			case 2:
 			{
 				system("cls");
-				this->CreateFictionBook();
+				CreateFictionBook();
 				system("pause");
 				break;
 			}
 			case 3:
 			{
 				system("cls");
-				this->ShowLibrary();
+				ShowLibrary();
 				system("pause");
 				break;
 			}
 			case 4:
 			{
 				system("cls");
-				this->RemoveLibrary();
+				RemoveLibrary();
 				system("pause");
 				break;
 			}
 			case 5:
 			{
 				system("cls");
-				this->WriteToFile();
+				WriteToFile();
 				system("pause");
 				break;
 			}
 			case 6:
 			{
 				system("cls");
-				this->ReadFormFile();
+				ReadFormFile();
 				system("pause");
 				break;
 			}
 			case 7:
 			{
 				system("cls");
-				this->SortBooks();
+				SortBooks();
 				system("pause");
 				break;
 			}
 			case 8:
 			{
 				system("cls");
-				this->MakeRequest();
+				MakeRequest();
 				system("pause");
 				break;
 			}
 			case 9:
 			{
 				system("cls");
-				//TODO add exit
+				//Exit
 				system("pause");
 				break;
 			}

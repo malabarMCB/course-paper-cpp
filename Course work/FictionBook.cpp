@@ -1,9 +1,17 @@
 #include "FictionBook.h"
-#include "iostream"
 using namespace std;
 
-//TODO add constructor and destructor
-char * FictionBook::GetGenre() const
+FictionBook::FictionBook(string name, string author, int pages, string genre, int chapters)
+{
+
+}
+
+FictionBook::~FictionBook()
+{
+
+}
+
+string FictionBook::GetGenre() const
 {
 	return this->genre;
 }
