@@ -146,5 +146,5 @@ void Menu::Run()
 				system("pause");
 			}
 		}
-	} while (choise != 10);
+	} while (choise != 9);
 }
