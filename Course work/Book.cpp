@@ -1,11 +1,10 @@
 #include "Book.h"
 using namespace std;
 
-Book::Book(string name, string author, int pages)
-	:pageCount(pages)
+Book::Book(string name, string author, int pageCount, string publishingCity, int publishingYear,
+	string publishingCompany, string language/*,string info*/)
 {
-	this->name = name;
-	this->author = author;
+
 }
 
 Book::~Book()
@@ -26,4 +25,24 @@ string Book::GetAutor() const
 string Book::GetName() const
 {
 	return this->name;
+}
+
+string Book::GetPublishingCity() const
+{
+	return this->publishingCity;
+}
+
+int Book::GetPublishingYear() const
+{
+	return this->publishingYear;
+}
+
+string Book::GetPublishingCompany() const
+{
+	return this->publishingCompany;
+}
+
+string Book::GetLanguage() const
+{
+	return this->language;
 }

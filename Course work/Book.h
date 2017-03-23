@@ -8,9 +8,16 @@ class Book
 		string name;
 		string author;
 		int pageCount;
+		string publishingCity;
+		int publishingYear;
+		string publishingCompany;
+		string language;
+		//string info;
+		//info- book`s topic(genre for fictionbook or subject for schoolbook)
 
 	public:
-		Book(string name, string author, int pageCount);
+		Book(string name, string author, int pageCount,string publishingCity, int publishingYear, 
+			string publishingCompany,string language/*,string info*/);
 
 		~Book();
 
@@ -19,6 +26,16 @@ class Book
 		string GetAutor() const;
 
 		int GetPageCount() const;
+
+		string GetPublishingCity() const;
+
+		int GetPublishingYear() const;
+
+		string GetPublishingCompany() const;
+
+		string GetLanguage() const;
+
+		//string GetInfo() const;
 
 		virtual void Show() const;
 };

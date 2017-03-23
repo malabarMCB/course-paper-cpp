@@ -1,7 +1,8 @@
 #include "FictionBook.h"
 using namespace std;
 
-FictionBook::FictionBook(string name, string author, int pages, string genre, int chapters)
+FictionBook::FictionBook(string name, string author, int pageCount, string publishingCity, int publishingYear,
+	string publishingCompany, string language, string genre, int chapterCount, int volNumber)
 {
 
 }
@@ -24,4 +25,9 @@ int FictionBook::GetChapterCount() const
 void FictionBook::Show() const
 {
 	cout << "This is fiction book"<<endl;
+}
+
+int FictionBook::GetVolNumber() const
+{
+	return this->volNumber;
 }

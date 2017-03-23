@@ -136,7 +136,6 @@ void Menu::Run()
 			case 9:
 			{
 				system("cls");
-				//Exit
 				system("pause");
 				break;
 			}

@@ -6,15 +6,19 @@ class FictionBook: public Book
 	private:
 		string genre;
 		int chapterCount;
+		int volNumber;
 
 	public:
-		FictionBook(string name, string author, int pages, string genre, int chapters);
+		FictionBook(string name, string author, int pageCount, string publishingCity, int publishingYear,
+			string publishingCompany, string language, string genre, int chapterCount, int volNumber);
 
 		~FictionBook();
 
 		string GetGenre() const;
 
 		int GetChapterCount() const;
+
+		int GetVolNumber() const;
 
 		void Show() const;
 };
