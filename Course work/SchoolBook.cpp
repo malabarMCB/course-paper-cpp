@@ -1,8 +1,9 @@
 #include "SchoolBook.h"
-using namespace std;
 
 SchoolBook::SchoolBook(string name, string author, int pageCount, string publishingCity, int publishingYear,
-	string publishingCompany, string language, bool hasAnswers)
+	string publishingCompanyName, string language,string subject, int classNumber,bool hasAnswers)
+		:Book(name,author,pageCount,publishingCity,publishingYear,publishingCompanyName,language),
+		subject(subject),classNumber(classNumber),hasAnswers(hasAnswers)
 {
 
 }
@@ -24,7 +25,11 @@ int SchoolBook::GetClassNumber() const
 
 void SchoolBook::Show() const
 {
-	cout << "This is school book"<<endl;
+	Book::Show();
+
+	cout << "Subject: " << subject << "\n"
+		<< "For " << classNumber << " class" << endl;
+	cout << (hasAnswers) ? "With answers" : "without answers";
 }
 
 bool SchoolBook::HasAnswers() const

@@ -10,7 +10,7 @@ class FictionBook: public Book
 
 	public:
 		FictionBook(string name, string author, int pageCount, string publishingCity, int publishingYear,
-			string publishingCompany, string language, string genre, int chapterCount, int volNumber);
+			string publishingCompanyName, string language, string genre, int chapterCount, int volNumber);
 
 		~FictionBook();
 

@@ -10,7 +10,7 @@ class SchoolBook:public Book
 
 	public:
 		SchoolBook(string name, string author, int pageCount, string publishingCity, int publishingYear,
-			string publishingCompany, string language, bool hasAnswers);
+			string publishingCompanyName, string language,string subject, int classNumber, bool hasAnswers);
 
 		~SchoolBook();
 

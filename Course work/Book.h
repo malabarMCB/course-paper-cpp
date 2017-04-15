@@ -1,25 +1,28 @@
 #pragma once
+#include "string"
 #include "iostream"
 using namespace std;
+
+struct Publisher {
+	string city;
+	int year;
+	string companyName;
+};
 
 class Book
 {
 	protected:
 		string name;
 		string author;
-		int pageCount;
-		string publishingCity;
-		int publishingYear;
-		string publishingCompany;
+		unsigned int pageCount;
+		Publisher publisher;
 		string language;
-		//string info;
-		//info- book`s topic(genre for fictionbook or subject for schoolbook)
 
 	public:
 		Book(string name, string author, int pageCount,string publishingCity, int publishingYear, 
-			string publishingCompany,string language/*,string info*/);
+			string publishingCompanyName,string language);
 
-		~Book();
+		virtual ~Book()=0;
 
 		string GetName() const;
 
@@ -31,11 +34,9 @@ class Book
 
 		int GetPublishingYear() const;
 
-		string GetPublishingCompany() const;
+		string GetPublishingCompanyName() const;
 
 		string GetLanguage() const;
-
-		//string GetInfo() const;
 
 		virtual void Show() const;
 };

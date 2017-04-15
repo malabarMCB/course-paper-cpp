@@ -1,10 +1,13 @@
 #include "Book.h"
-using namespace std;
+
 
 Book::Book(string name, string author, int pageCount, string publishingCity, int publishingYear,
-	string publishingCompany, string language/*,string info*/)
+	string publishingCompanyName, string language)
+		:name(name),author(author),pageCount(pageCount),language(language)
 {
-
+	publisher.city = publishingCity;
+	publisher.companyName = publishingCompanyName;
+	publisher.year = publishingYear;
 }
 
 Book::~Book()
@@ -29,20 +32,30 @@ string Book::GetName() const
 
 string Book::GetPublishingCity() const
 {
-	return this->publishingCity;
+	return this->publisher.city;
 }
 
 int Book::GetPublishingYear() const
 {
-	return this->publishingYear;
+	return this->publisher.year;
 }
 
-string Book::GetPublishingCompany() const
+string Book::GetPublishingCompanyName() const
 {
-	return this->publishingCompany;
+	return this->publisher.companyName;
 }
 
 string Book::GetLanguage() const
 {
 	return this->language;
+}
+
+void Book::Show() const
+{
+	cout << "Name: " << name << "\n"
+		<< "Author: " << author << "\n"
+		<< "Pages: " << pageCount << "\n"
+		<< "Language: " << language << "\n"
+		<< "Published in " << publisher.city << ", "
+		<< publisher.year << " by" << publisher.companyName << endl;
 }
