@@ -1,9 +1,9 @@
 #include "FictionBook.h"
 
 
-FictionBook::FictionBook(string name, string author, int pageCount, string publishingCity, int publishingYear,
-	string publishingCompanyName, string language, string genre, int chapterCount, int volNumber)
-		:Book(name,author,pageCount,publishingCity,publishingYear,publishingCompanyName,language), genre(genre),
+FictionBook::FictionBook(string name, string author, int pageCount,Publisher publisher, 
+	string language, string genre, int chapterCount, int volNumber)
+		:Book(name,author,pageCount,publisher,language), genre(genre),
 		chapterCount(chapterCount),volNumber(volNumber)
 {
 

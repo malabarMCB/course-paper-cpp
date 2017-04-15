@@ -1,13 +1,10 @@
 #include "Book.h"
 
 
-Book::Book(string name, string author, int pageCount, string publishingCity, int publishingYear,
-	string publishingCompanyName, string language)
-		:name(name),author(author),pageCount(pageCount),language(language)
+Book::Book(string name, string author, int pageCount,Publisher publisher, string language)
+		:name(name),author(author),pageCount(pageCount),language(language),publisher(publisher)
 {
-	publisher.city = publishingCity;
-	publisher.companyName = publishingCompanyName;
-	publisher.year = publishingYear;
+
 }
 
 Book::~Book()

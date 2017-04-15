@@ -19,8 +19,7 @@ class Book
 		string language;
 
 	public:
-		Book(string name, string author, int pageCount,string publishingCity, int publishingYear, 
-			string publishingCompanyName,string language);
+		Book(string name, string author, int pageCount,Publisher publisher,string language);
 
 		virtual ~Book()=0;
 

@@ -5,12 +5,12 @@ class SchoolBook:public Book
 {
 	private:
 		string subject;
-		int classNumber;
+		unsigned int classNumber;
 		bool hasAnswers;
 
 	public:
-		SchoolBook(string name, string author, int pageCount, string publishingCity, int publishingYear,
-			string publishingCompanyName, string language,string subject, int classNumber, bool hasAnswers);
+		SchoolBook(string name, string author, int pageCount,Publisher publisher,
+			string language,string subject, int classNumber, bool hasAnswers);
 
 		~SchoolBook();
 

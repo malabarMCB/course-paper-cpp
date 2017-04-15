@@ -1,8 +1,7 @@
 #include "SchoolBook.h"
 
-SchoolBook::SchoolBook(string name, string author, int pageCount, string publishingCity, int publishingYear,
-	string publishingCompanyName, string language,string subject, int classNumber,bool hasAnswers)
-		:Book(name,author,pageCount,publishingCity,publishingYear,publishingCompanyName,language),
+SchoolBook::SchoolBook(string name, string author, int pageCount,Publisher publisher,string language,string subject, int classNumber,bool hasAnswers)
+		:Book(name,author,pageCount,publisher,language),
 		subject(subject),classNumber(classNumber),hasAnswers(hasAnswers)
 {
 

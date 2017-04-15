@@ -5,12 +5,12 @@ class FictionBook: public Book
 {
 	private:
 		string genre;
-		int chapterCount;
-		int volNumber;
+		unsigned int chapterCount;
+		unsigned int volNumber;
 
 	public:
-		FictionBook(string name, string author, int pageCount, string publishingCity, int publishingYear,
-			string publishingCompanyName, string language, string genre, int chapterCount, int volNumber);
+		FictionBook(string name, string author, int pageCount, Publisher publisher, 
+			string language, string genre, int chapterCount, int volNumber);
 
 		~FictionBook();
 
