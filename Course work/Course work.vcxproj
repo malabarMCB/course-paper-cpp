@@ -20,18 +20,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="BookCreatorcpp.cpp" />
     <ClCompile Include="FictionBook.cpp" />
-    <ClCompile Include="Librarycpp.cpp" />
+    <ClCompile Include="FictionBookCreator.cpp" />
+    <ClCompile Include="Library.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="SchoolBook.cpp" />
+    <ClCompile Include="SchoolBookCreator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
+    <ClInclude Include="BookCreator.h" />
     <ClInclude Include="FictionBook.h" />
+    <ClInclude Include="FictionBookCreator.h" />
     <ClInclude Include="Libraryh.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="SchoolBook.h" />
+    <ClInclude Include="SchoolBookCreator.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{ED0F30CD-822C-4AB6-957E-A2D6101B5880}</ProjectGuid>

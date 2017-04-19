@@ -17,5 +17,5 @@ class BookCreator
 		~BookCreator();
 
 		//VS underlines it sometimes
-		virtual Book Create()=0;
+		virtual Book* Create()=0;
 };

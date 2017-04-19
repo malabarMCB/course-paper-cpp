@@ -5,7 +5,7 @@ FictionBookCreator::~FictionBookCreator()
 
 }
 
-FictionBook FictionBookCreator::Create()
+FictionBook* FictionBookCreator::Create()
 {
 	Initialize();
 
@@ -21,5 +21,5 @@ FictionBook FictionBookCreator::Create()
 	cout << "Enter number volume number";
 	cin >> volNumber;
 
-	return FictionBook(name, author, pageCount, publisher, language, genre, chapterCount, volNumber);
+	return new FictionBook(name, author, pageCount, publisher, language, genre, chapterCount, volNumber);
 }

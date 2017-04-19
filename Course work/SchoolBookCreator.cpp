@@ -5,7 +5,7 @@ SchoolBookCreator::~SchoolBookCreator()
 
 }
 
-SchoolBook SchoolBookCreator::Create()
+SchoolBook* SchoolBookCreator::Create()
 {
 	Initialize();
 
@@ -37,6 +37,6 @@ SchoolBook SchoolBookCreator::Create()
 		}
 	} while (answer==2);
 
-	return SchoolBook(name, author, pageCount, publisher, language, subject, classNumber, hasAnswers);
+	return new SchoolBook(name, author, pageCount, publisher, language, subject, classNumber, hasAnswers);
 
 }

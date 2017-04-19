@@ -8,5 +8,5 @@ class FictionBookCreator : public BookCreator
 	public:
 		~FictionBookCreator();
 
-		FictionBook Create();
+		FictionBook* Create();
 };

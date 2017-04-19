@@ -1,4 +1,6 @@
 #include "Menu.h"
+#include "FictionBookCreator.h"
+#include "SchoolBookCreator.h"
 
 Menu::Menu()
 {
@@ -12,19 +14,23 @@ Menu::~Menu()
 
 void Menu::CreateSchoolBook()
 {
-	cout << "Enter parameters";
-	//library->Push();
+	SchoolBookCreator bookCreator;
+	Book* book = bookCreator.Create();
+
+	library->Push(book);
 }
 
 void Menu::CreateFictionBook()
 {
-	cout << "Enter parameters";
-	//library->Push();
+	FictionBookCreator bookCreator;
+	Book* book = bookCreator.Create();
+
+	library->Push(book);
 }
 
 void Menu::ShowLibrary() const
 {
-	library->Show();
+	library->Print();
 }
 
 void Menu::RemoveLibrary()

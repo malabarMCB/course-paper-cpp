@@ -7,5 +7,5 @@ class SchoolBookCreator: public BookCreator
 	public:
 		~SchoolBookCreator();
 
-		SchoolBook Create();
+		SchoolBook* Create();
 };
