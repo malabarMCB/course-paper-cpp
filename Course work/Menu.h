@@ -1,11 +1,13 @@
 #pragma once
-#include "Libraryh.h"
+#include "LibrarySerializer.h"
 
 class Menu
 {
 	private:
 
-		Library *library;
+		Library* library;
+
+		LibrarySerializer* serializer;
 
 		void CreateSchoolBook();
 
@@ -15,9 +17,9 @@ class Menu
 
 		void RemoveLibrary();
 
-		int WriteToFile();
+		void WriteToFile();
 
-		int ReadFormFile();
+		void ReadFormFile();
 
 		void SortBooks();
 

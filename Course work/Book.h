@@ -19,9 +19,11 @@ class Book
 		string language;
 
 	public:
+		Book();
+
 		Book(string name, string author, int pageCount,Publisher publisher,string language);
 
-		virtual ~Book()=0;
+		virtual ~Book();
 
 		string GetName() const;
 
@@ -38,4 +40,6 @@ class Book
 		string GetLanguage() const;
 
 		virtual void Show() const;
+
+		virtual void Serialize(ofstream* in) const = 0;
 };

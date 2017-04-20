@@ -4,12 +4,14 @@
 
 Menu::Menu()
 {
-	this->library = new Library();
+	library = new Library();
+	serializer = new LibrarySerializer;
 }
 
 Menu::~Menu()
 {
 	delete library;
+	delete serializer;
 }
 
 void Menu::CreateSchoolBook()
@@ -38,16 +40,22 @@ void Menu::RemoveLibrary()
 	library->Clean();
 }
 
-int Menu::WriteToFile()
+void Menu::WriteToFile()
 {
-	cout << "Library serizlized";
-	return 1;
+	string path="collection.dat";
+	//cout << "Enter path: ";
+	//cin >> path;
+
+	serializer->Serialize(library, path);
 }
 
-int Menu::ReadFormFile()
+void Menu::ReadFormFile()
 {
-	cout << "Library deserialized";
-	return 1;
+	string path = "collection.dat";
+	//cout << "Enter path: ";
+	//cin >> path;
+
+	serializer->Deserialize(library, path);
 }
 
 void Menu::SortBooks()
@@ -139,16 +147,14 @@ void Menu::Run()
 				system("pause");
 				break;
 			}
-			case 9:
-			{
-				system("cls");
-				system("pause");
-				break;
-			}
 			default:
 			{
-				cout << "Incorrect choise" << endl;
-				system("pause");
+				if (choise < 0 || choise>9)
+				{
+					cout << "Incorrect choise" << endl;
+					system("pause");
+				}
+				break;
 			}
 		}
 	} while (choise != 9);

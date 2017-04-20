@@ -1,5 +1,9 @@
 #include "Book.h"
 
+Book::Book()
+{
+
+}
 
 Book::Book(string name, string author, int pageCount,Publisher publisher, string language)
 		:name(name),author(author),pageCount(pageCount),language(language),publisher(publisher)
@@ -54,5 +58,5 @@ void Book::Show() const
 		<< "Pages: " << pageCount << "\n"
 		<< "Language: " << language << "\n"
 		<< "Published in " << publisher.city << ", "
-		<< publisher.year << " by" << publisher.companyName << endl;
+		<< publisher.year << " by " << publisher.companyName << endl;
 }

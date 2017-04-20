@@ -9,6 +9,8 @@ class FictionBook: public Book
 		unsigned int volNumber;
 
 	public:
+		FictionBook();
+
 		FictionBook(string name, string author, int pageCount, Publisher publisher, 
 			string language, string genre, int chapterCount, int volNumber);
 
@@ -20,5 +22,11 @@ class FictionBook: public Book
 
 		int GetVolNumber() const;
 
+		friend ostream& operator<<(ostream& out, const FictionBook& book);
+
+		friend istream& operator>>(istream& in, FictionBook& book);
+
 		void Show() const;
+
+		void Serialize(ofstream* in) const;
 };

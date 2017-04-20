@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Заголовочные файлы\BookCreators">
+      <UniqueIdentifier>{60c5d8b5-577a-4457-a870-6ed7e2bf1a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Books">
+      <UniqueIdentifier>{70392e5c-7d68-45db-a149-eb2a28bc1e09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\BookCreators">
+      <UniqueIdentifier>{3a479279-6daf-4f75-bc83-3cc51750ede5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Books">
+      <UniqueIdentifier>{899ab6c5-a791-4774-8645-ca0f8c905244}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,25 +33,28 @@
     <ClCompile Include="Menu.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Book.cpp">
+    <ClCompile Include="Library.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="SchoolBook.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
-    <ClCompile Include="FictionBook.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
-    <ClCompile Include="BookCreatorcpp.cpp">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="BookCreator.cpp">
+      <Filter>Файлы ресурсов\BookCreators</Filter>
     </ClCompile>
     <ClCompile Include="FictionBookCreator.cpp">
-      <Filter>Файлы ресурсов</Filter>
+      <Filter>Файлы ресурсов\BookCreators</Filter>
     </ClCompile>
     <ClCompile Include="SchoolBookCreator.cpp">
-      <Filter>Файлы ресурсов</Filter>
+      <Filter>Файлы ресурсов\BookCreators</Filter>
     </ClCompile>
-    <ClCompile Include="Library.cpp">
+    <ClCompile Include="Book.cpp">
+      <Filter>Файлы ресурсов\Books</Filter>
+    </ClCompile>
+    <ClCompile Include="FictionBook.cpp">
+      <Filter>Файлы ресурсов\Books</Filter>
+    </ClCompile>
+    <ClCompile Include="SchoolBook.cpp">
+      <Filter>Файлы ресурсов\Books</Filter>
+    </ClCompile>
+    <ClCompile Include="LibrarySerializer.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,26 +62,29 @@
     <ClInclude Include="Menu.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="SchoolBook.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="FictionBook.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Book.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="Libraryh.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="BookCreator.h">
+    <ClInclude Include="LibrarySerializer.h">
       <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="BookCreator.h">
+      <Filter>Заголовочные файлы\BookCreators</Filter>
     </ClInclude>
     <ClInclude Include="FictionBookCreator.h">
-      <Filter>Заголовочные файлы</Filter>
+      <Filter>Заголовочные файлы\BookCreators</Filter>
     </ClInclude>
     <ClInclude Include="SchoolBookCreator.h">
-      <Filter>Заголовочные файлы</Filter>
+      <Filter>Заголовочные файлы\BookCreators</Filter>
+    </ClInclude>
+    <ClInclude Include="Book.h">
+      <Filter>Заголовочные файлы\Books</Filter>
+    </ClInclude>
+    <ClInclude Include="FictionBook.h">
+      <Filter>Заголовочные файлы\Books</Filter>
+    </ClInclude>
+    <ClInclude Include="SchoolBook.h">
+      <Filter>Заголовочные файлы\Books</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,11 +11,11 @@ class BookCreator
 		Publisher publisher;
 		string language;
 
+		void FlushCinBuffer();
 		void Initialize();
 	
 	public:
 		~BookCreator();
 
-		//VS underlines it sometimes
 		virtual Book* Create()=0;
 };

@@ -8,7 +8,7 @@ struct Node
 };
 
 //Stack
-// Ask about void from Pop and Book* from Peek
+// Ask about void from Pop and Peek
 class Library
 {
 	private:
@@ -34,6 +34,7 @@ class Library
 
 		void Print() const;
 
+		Book* operator [](int index) const;
 		
 		void Sort();
 

@@ -13,16 +13,16 @@ SchoolBook* SchoolBookCreator::Create()
 	unsigned int classNumber;
 	bool hasAnswers;
 
-	cout << "Enter subject ";
-	cin >> subject;
+	cout << "Enter subject: ";
+	getline(cin, subject, '\n');
 
-	cout << "Enter class number ";
+	cout << "Enter class number: ";
 	cin >> classNumber;
 
 	int answer;
 	do
 	{
-		cout << "With answers? (no-0, yes-1)";
+		cout << "With answers? (no-0, yes-1): ";
 		cin >> answer;
 		switch (answer)
 		{
@@ -34,6 +34,7 @@ SchoolBook* SchoolBookCreator::Create()
 				break;
 			default:
 				answer = 2;
+				break;
 		}
 	} while (answer==2);
 

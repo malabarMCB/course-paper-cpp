@@ -20,10 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
-    <ClCompile Include="BookCreatorcpp.cpp" />
+    <ClCompile Include="BookCreator.cpp" />
     <ClCompile Include="FictionBook.cpp" />
     <ClCompile Include="FictionBookCreator.cpp" />
     <ClCompile Include="Library.cpp" />
+    <ClCompile Include="LibrarySerializer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="SchoolBook.cpp" />
@@ -35,6 +36,7 @@
     <ClInclude Include="FictionBook.h" />
     <ClInclude Include="FictionBookCreator.h" />
     <ClInclude Include="Libraryh.h" />
+    <ClInclude Include="LibrarySerializer.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="SchoolBook.h" />
     <ClInclude Include="SchoolBookCreator.h" />

@@ -75,6 +75,19 @@ void Library::Clean()
 	count = 0;
 }
 
+Book* Library::operator [](int index) const
+{
+	if (index<0 || index>Count())
+		return NULL;
+
+	Node* current = head;
+	for (int i = 0;i < index;i++)
+		current = current->next;
+
+	return current->value;
+
+}
+
 void Library::Print() const
 {
 	if (IsEmpty())
