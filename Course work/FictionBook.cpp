@@ -84,5 +84,5 @@ istream& operator>>(istream& in, FictionBook& book)
 void FictionBook::Serialize(ofstream* in) const
 {
 	*in <<"FictionBook"<< endl;
-	*in << (*((FictionBook*)this));
+	*in << this;
 }

@@ -1,22 +1,22 @@
 #include "Libraryh.h"
 
-Library::Library():count(0)
+Library::Library()
 {
-	
+	head = new Node;
+	head->value = NULL;
+	head->next = NULL;
 }
 
 Library::~Library()
 {
 	this->Clean();
+	delete head;
 }
 
 void Library::Push(Book* book)
 {
-	if (IsEmpty()) {
-		head = new Node;
+	if (IsEmpty()) 
 		head->value = book;
-		head->next = NULL;
-	}
 	else
 	{
 		Node *tmpHead = new Node;
@@ -25,8 +25,6 @@ void Library::Push(Book* book)
 
 		head = tmpHead;
 	}
-
-	count++;
 }
 
 void Library::Pop()
@@ -39,45 +37,47 @@ void Library::Pop()
 	
 	Node *tmpHead = head;
 	head = head->next;
-	count--;
 
 	delete tmpHead;
 }
 
-Book* Library::Peek() const
-{
-	if (IsEmpty())
-	{
-		cout << "Empty stack"<<endl;
-		return NULL;
-	}
-	return head->value;
-}
-
 bool Library::IsEmpty() const
 {
-	return count == 0;
+	return Count() == 0;
 }
 
 int Library::Count() const
 {
+	int count = 0;
+	Node* current = head;
+	do
+	{
+		if (current->value == NULL)
+			break;
+		count++;
+		current = current->next;
+
+	} while (current!= NULL);
+
 	return count;
 }
 
 void Library::Clean()
 {
-	if (count == 0)
+	if (IsEmpty())
 		return;
 
-	int num = count;
-	for (int i = 0;i < num;i++)
+	int count = Count();
+	for (int i = 0;i < count-1;i++)
 		Pop();
-	count = 0;
+	
+	delete head->value;
+	head->value = NULL;
 }
 
 Book* Library::operator [](int index) const
 {
-	if (index<0 || index>Count())
+	if (index<0 || index>=Count())
 		return NULL;
 
 	Node* current = head;
@@ -97,7 +97,8 @@ void Library::Print() const
 	}
 
 	Node* current = head;
-	for (int i = 0;i < count;i++)
+	int count = Count();
+	for (int i = 0;i <count;i++)
 	{
 		cout << "Book " << i<<endl;
 		current->value->Show();

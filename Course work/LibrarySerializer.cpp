@@ -18,8 +18,9 @@ void LibrarySerializer::Serialize(Library* library, string path) const
 
 	ofstream streamToFile(path);
 
-	for (int i = 0;i < library->Count();i++)
-		library->operator[](i)->Serialize(&streamToFile);
+	int length = library->Count();
+	for (int i = 0;i <length;i++)
+		(*library)[i]->Serialize(&streamToFile);
 
 	streamToFile.close();
 

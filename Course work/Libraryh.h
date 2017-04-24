@@ -8,23 +8,21 @@ struct Node
 };
 
 //Stack
-// Ask about void from Pop and Peek
+//Find more const methods and add smth to ctor
+//Check whole stack because of Count() changing
 class Library
 {
 	private:
 		Node* head;
-		int count;
 
 	public:
 		Library();
 
 		~Library();
 
-		void Push(Book *book);
+		void Push(Book* book);
 
 		void Pop();
-
-		Book* Peek() const;
 
 		bool IsEmpty() const;
 		
