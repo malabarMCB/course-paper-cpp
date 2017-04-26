@@ -8,8 +8,6 @@ struct Node
 };
 
 //Stack
-//Find more const methods and add smth to ctor
-//Check whole stack because of Count() changing
 class Library
 {
 	private:

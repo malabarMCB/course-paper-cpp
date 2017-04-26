@@ -8,9 +8,9 @@ LibrarySerializer::~LibrarySerializer()
 
 }
 
-void LibrarySerializer::Serialize(Library* library, string path) const
+void LibrarySerializer::Serialize(Library& library, string path) const
 {
-	if (library->IsEmpty())
+	if (library.IsEmpty())
 	{
 		cout << "SERIALIZATION ERROR! Empty library"<<endl;
 		return;
@@ -18,9 +18,9 @@ void LibrarySerializer::Serialize(Library* library, string path) const
 
 	ofstream streamToFile(path);
 
-	int length = library->Count();
+	int length = library.Count();
 	for (int i = 0;i <length;i++)
-		(*library)[i]->Serialize(&streamToFile);
+		library[i]->Serialize(&streamToFile);
 
 	streamToFile.close();
 

@@ -6,7 +6,7 @@ class LibrarySerializer
 	public:
 		~LibrarySerializer();
 
-		void Serialize(Library* library, string path) const;
+		void Serialize(Library& library, string path) const;
 
 		void Deserialize(Library* library, string path) const;
 };

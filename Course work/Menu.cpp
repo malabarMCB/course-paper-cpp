@@ -46,7 +46,7 @@ void Menu::WriteToFile()
 	//cout << "Enter path: ";
 	//cin >> path;
 
-	serializer->Serialize(library, path);
+	serializer->Serialize(*library, path);
 }
 
 void Menu::ReadFormFile()
