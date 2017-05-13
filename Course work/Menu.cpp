@@ -20,6 +20,7 @@ void Menu::CreateSchoolBook()
 	Book* book = bookCreator.Create();
 
 	library->Push(book);
+	cout << endl << "Book added" << endl;
 }
 
 void Menu::CreateFictionBook()
@@ -38,6 +39,7 @@ void Menu::ShowLibrary() const
 void Menu::RemoveLibrary()
 {
 	library->Clean();
+	cout << "Library cleaned" << endl;
 }
 
 void Menu::WriteToFile()
@@ -61,6 +63,7 @@ void Menu::ReadFormFile()
 void Menu::SortBooks()
 {
 	library->SortByBookName();
+	cout << "Library sorted" << endl;
 }
 
 void Menu::MakeRequest()
@@ -82,7 +85,7 @@ void Menu::Run()
 		cout << "<4>. Remove the library" <<endl;
 		cout << "<5>. Save to file" <<endl;
 		cout << "<6>. Load from the file" <<endl;
-		cout << "<7>. Sort objects" <<endl;
+		cout << "<7>. Sort books" <<endl;
 		cout << "<8>. Make request" <<endl;
 		cout << "<9>. Leave the program" <<endl;
 

@@ -1,10 +1,9 @@
 #include "Libraryh.h"
+#include "SchoolBook.h"
 
 Library::Library()
 {
-	head = new Node;
-	head->value = NULL;
-	head->next = NULL;
+	head = NULL;
 }
 
 Library::~Library()
@@ -15,16 +14,10 @@ Library::~Library()
 
 void Library::Push(Book* book)
 {
-	if (IsEmpty()) 
-		head->value = book;
-	else
-	{
-		Node *tmpHead = new Node;
-		tmpHead->value = book;
-		tmpHead->next = head;
-
-		head = tmpHead;
-	}
+	Node *tmpHead = new Node;
+	tmpHead->value = book;
+	tmpHead->next = head;
+	head = tmpHead;
 }
 
 void Library::Pop()
@@ -35,29 +28,27 @@ void Library::Pop()
 		return;
 	}
 	
-	Node *tmpHead = head;
+	Node *toDelete = head;
 	head = head->next;
 
-	delete tmpHead;
+	delete toDelete;
 }
 
 bool Library::IsEmpty() const
 {
-	return Count() == 0;
+	return head == NULL;
 }
 
 int Library::Count() const
 {
 	int count = 0;
 	Node* current = head;
-	do
+
+	while (current!=NULL)
 	{
-		if (current->value == NULL)
-			break;
 		count++;
 		current = current->next;
-
-	} while (current!= NULL);
+	}
 
 	return count;
 }
@@ -68,11 +59,10 @@ void Library::Clean()
 		return;
 
 	int count = Count();
-	for (int i = 0;i < count-1;i++)
+	for (int i = 0;i < count;i++)
 		Pop();
 	
-	delete head->value;
-	head->value = NULL;
+	head = NULL;
 }
 
 Book* Library::operator [](int index) const
@@ -125,9 +115,9 @@ void Library::SortByBookName()
 
 		for (int j = 0;j < count - i - 1;j++)
 		{
-			string str1 = current->value->GetName();
-			string str2 = current->next->value->GetName();
-			if (str1>str2)
+			string left = current->value->GetName();
+			string right = current->next->value->GetName();
+			if (left>right)
 				Swap(current, current->next);
 			current = current->next;
 		}
@@ -136,5 +126,6 @@ void Library::SortByBookName()
 
 void Library::PrintShoolbooksWithTopic(string topic) const
 {
-	cout << "Schoolbooks with "<<topic<<endl;
+	/*Node* current = head;
+	while()*/
 }
