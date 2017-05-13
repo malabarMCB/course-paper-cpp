@@ -17,13 +17,13 @@ class Menu
 
 		void RemoveLibrary();
 
-		void WriteToFile();
+		void WriteToFile() const;
 
 		void ReadFormFile();
 
-		void SortBooks();
+		void SortBooks() const;
 
-		void MakeRequest();
+		void MakeRequest() const;
 
 	public:
 		Menu();

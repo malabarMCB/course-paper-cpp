@@ -81,8 +81,8 @@ istream& operator>>(istream& in, FictionBook& book)
 	return in;
 }
 
-void FictionBook::Serialize(ofstream* in) const
+void FictionBook::Serialize(ofstream* out) const
 {
-	*in <<"FictionBook"<< endl;
-	*in << *this;
+	*out <<"FictionBook"<< endl;
+	*out << *this;
 }

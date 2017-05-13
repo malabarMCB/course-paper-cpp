@@ -41,5 +41,5 @@ class Book
 
 		virtual void Show() const;
 
-		virtual void Serialize(ofstream* in) const = 0;
+		virtual void Serialize(ofstream* out) const = 0;
 };

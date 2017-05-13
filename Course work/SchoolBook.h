@@ -28,5 +28,5 @@ class SchoolBook:public Book
 
 		void Show() const;
 
-		void Serialize(ofstream* in) const;
+		void Serialize(ofstream* out) const;
 };

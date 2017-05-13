@@ -4,7 +4,7 @@
 
 Menu::Menu()
 {
-	library = new Library();
+	library = new Library;
 	serializer = new LibrarySerializer;
 }
 
@@ -41,7 +41,7 @@ void Menu::RemoveLibrary()
 	cout << "Library cleaned" << endl;
 }
 
-void Menu::WriteToFile()
+void Menu::WriteToFile() const
 {
 	string path="collection.dat";
 	//cout << "Enter path: ";
@@ -59,13 +59,13 @@ void Menu::ReadFormFile()
 	serializer->Deserialize(library, path);
 }
 
-void Menu::SortBooks()
+void Menu::SortBooks() const
 {
 	library->SortByBookName();
 	cout << "Library sorted" << endl;
 }
 
-void Menu::MakeRequest()
+void Menu::MakeRequest() const
 {
 	string topic;
 	cout << "Enter topic" << endl;

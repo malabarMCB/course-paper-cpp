@@ -32,7 +32,10 @@ void LibrarySerializer::Deserialize(Library* library, string path) const
 	ifstream streamFromFile(path);
 
 	if (!streamFromFile.is_open())
+	{
 		cout << "DESEREALIZATION ERROR! Incorrect file name" << endl;
+		return;
+	}
 
 	FictionBook* fictionBook;
 	SchoolBook* schoolBook;
