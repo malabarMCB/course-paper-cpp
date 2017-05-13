@@ -44,9 +44,9 @@ bool SchoolBook::HasAnswers() const
 	return this->hasAnswers;
 }
 
-ostream& operator<<(ostream& oftStream, const SchoolBook& book)
+ostream& operator<<(ostream& out, const SchoolBook& book)
 {
-	oftStream << book.GetName() << "\n"
+	out << book.GetName() << "\n"
 		<< book.GetAutor() << "\n"
 		<< book.GetPageCount() << "\n"
 		<< book.GetPublishingCity() << "\n"
@@ -57,7 +57,7 @@ ostream& operator<<(ostream& oftStream, const SchoolBook& book)
 		<< book.GetClassNumber() << "\n"
 		<< book.HasAnswers() << endl;
 
-	return oftStream;
+	return out;
 }
 
 istream& operator >> (istream& in, SchoolBook& book)

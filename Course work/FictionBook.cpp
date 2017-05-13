@@ -44,15 +44,15 @@ unsigned int FictionBook::GetVolNumber() const
 
 ostream& operator<<(ostream& out, const FictionBook& book)
 {
-	out << book.GetName() <<endl
-		<< book.GetAutor() << endl
-		<< book.GetPageCount() << endl
-		<< book.GetPublishingCity() << endl
-		<< book.GetPublishingCompanyName() << endl
-		<< book.GetPublishingYear() << endl
-		<< book.GetLanguage() << endl
-		<< book.GetGenre() << endl
-		<< book.GetChapterCount() << endl
+	out << book.GetName() <<"\n"
+		<< book.GetAutor() << "\n"
+		<< book.GetPageCount() << "\n"
+		<< book.GetPublishingCity() << "\n"
+		<< book.GetPublishingCompanyName() << "\n"
+		<< book.GetPublishingYear() << "\n"
+		<< book.GetLanguage() << "\n"
+		<< book.GetGenre() << "\n"
+		<< book.GetChapterCount() << "\n"
 		<< book.GetVolNumber() << endl;
 
 	return out;
@@ -84,5 +84,5 @@ istream& operator>>(istream& in, FictionBook& book)
 void FictionBook::Serialize(ofstream* in) const
 {
 	*in <<"FictionBook"<< endl;
-	*in << this;
+	*in << *this;
 }

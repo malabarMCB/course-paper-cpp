@@ -126,6 +126,13 @@ void Library::SortByBookName()
 
 void Library::PrintShoolbooksWithTopic(string topic) const
 {
-	/*Node* current = head;
-	while()*/
+	Node* current = head;
+	while (current != NULL)
+	{
+		SchoolBook* schoolBook = dynamic_cast<SchoolBook*>(current->value);
+		if (schoolBook != NULL &&  schoolBook->GetSubject() == topic)
+			schoolBook->Show();
+		
+		current = current->next;
+	}
 }

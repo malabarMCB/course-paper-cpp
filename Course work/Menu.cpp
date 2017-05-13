@@ -20,7 +20,6 @@ void Menu::CreateSchoolBook()
 	Book* book = bookCreator.Create();
 
 	library->Push(book);
-	cout << endl << "Book added" << endl;
 }
 
 void Menu::CreateFictionBook()
@@ -68,7 +67,10 @@ void Menu::SortBooks()
 
 void Menu::MakeRequest()
 {
-	library->PrintShoolbooksWithTopic("test topic");
+	string topic;
+	cout << "Enter topic" << endl;
+	cin >> topic;
+	library->PrintShoolbooksWithTopic(topic);
 }
 
 void Menu::Run()
