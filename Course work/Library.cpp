@@ -108,9 +108,30 @@ void Library::Print() const
 	}
 }
 
+void Library::Swap(Node* left, Node* right)
+{
+	Book* tmp = left->value;
+	left->value = right->value;
+	right->value = tmp;
+}
+
 void Library::SortByBookName()
 {
-	cout << "Sorted"<<endl;
+	int count = Count();
+
+	for (int i = 0;i < count - 1;i++)
+	{
+		Node* current = head;
+
+		for (int j = 0;j < count - i - 1;j++)
+		{
+			string str1 = current->value->GetName();
+			string str2 = current->next->value->GetName();
+			if (str1>str2)
+				Swap(current, current->next);
+			current = current->next;
+		}
+	}
 }
 
 void Library::PrintShoolbooksWithTopic(string topic) const

@@ -12,6 +12,7 @@ class Library
 {
 	private:
 		Node* head;
+		void Swap(Node* left, Node* right);
 
 	public:
 		Library();
