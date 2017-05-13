@@ -108,7 +108,7 @@ void Library::Print() const
 	}
 }
 
-void Library::Sort()
+void Library::SortByBookName()
 {
 	cout << "Sorted"<<endl;
 }

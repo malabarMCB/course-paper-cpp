@@ -5,7 +5,7 @@ using namespace std;
 
 struct Publisher {
 	string city;
-	int year;
+	unsigned int year;
 	string companyName;
 };
 
@@ -21,7 +21,7 @@ class Book
 	public:
 		Book();
 
-		Book(string name, string author, int pageCount,Publisher publisher,string language);
+		Book(string name, string author, unsigned int pageCount,Publisher publisher,string language);
 
 		virtual ~Book();
 
@@ -29,11 +29,11 @@ class Book
 
 		string GetAutor() const;
 
-		int GetPageCount() const;
+		unsigned int GetPageCount() const;
 
 		string GetPublishingCity() const;
 
-		int GetPublishingYear() const;
+		unsigned int GetPublishingYear() const;
 
 		string GetPublishingCompanyName() const;
 

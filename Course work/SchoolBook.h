@@ -11,14 +11,14 @@ class SchoolBook:public Book
 	public:
 		SchoolBook();
 
-		SchoolBook(string name, string author, int pageCount,Publisher publisher,
-			string language,string subject, int classNumber, bool hasAnswers);
+		SchoolBook(string name, string author, unsigned int pageCount,Publisher publisher,
+			string language,string subject, unsigned int classNumber, bool hasAnswers);
 
 		~SchoolBook();
 
 		string GetSubject() const;
 
-		int GetClassNumber() const;
+		unsigned int GetClassNumber() const;
 
 		bool HasAnswers() const;
 

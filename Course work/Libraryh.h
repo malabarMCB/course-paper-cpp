@@ -32,7 +32,7 @@ class Library
 
 		Book* operator [](int index) const;
 		
-		void Sort();
+		void SortByBookName();
 
 		void PrintShoolbooksWithTopic(string topic) const;
 };

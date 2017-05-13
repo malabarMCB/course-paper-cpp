@@ -6,8 +6,8 @@ FictionBook::FictionBook()
 
 }
 
-FictionBook::FictionBook(string name, string author, int pageCount,Publisher publisher, 
-	string language, string genre, int chapterCount, int volNumber)
+FictionBook::FictionBook(string name, string author, unsigned int pageCount,Publisher publisher,
+	string language, string genre, unsigned int chapterCount, unsigned int volNumber)
 		:Book(name,author,pageCount,publisher,language), genre(genre),
 		chapterCount(chapterCount),volNumber(volNumber)
 {
@@ -24,7 +24,7 @@ string FictionBook::GetGenre() const
 	return this->genre;
 }
 
-int FictionBook::GetChapterCount() const
+unsigned int FictionBook::GetChapterCount() const
 {
 	return this->chapterCount;
 }
@@ -37,7 +37,7 @@ void FictionBook::Show() const
 		<< "Vol number " << volNumber << endl;
 }
 
-int FictionBook::GetVolNumber() const
+unsigned int FictionBook::GetVolNumber() const
 {
 	return this->volNumber;
 }

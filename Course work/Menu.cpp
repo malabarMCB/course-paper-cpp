@@ -61,7 +61,7 @@ void Menu::ReadFormFile()
 void Menu::SortBooks()
 {
 	cout << "Sorted";
-	library->Sort();
+	library->SortByBookName();
 }
 
 void Menu::MakeRequest()

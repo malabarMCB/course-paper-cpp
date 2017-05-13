@@ -5,7 +5,7 @@ Book::Book()
 
 }
 
-Book::Book(string name, string author, int pageCount,Publisher publisher, string language)
+Book::Book(string name, string author, unsigned int pageCount,Publisher publisher, string language)
 		:name(name),author(author),pageCount(pageCount),language(language),publisher(publisher)
 {
 
@@ -16,7 +16,7 @@ Book::~Book()
 	
 }
 
-int Book::GetPageCount() const
+unsigned int Book::GetPageCount() const
 {
 	return this->pageCount;
 }
@@ -36,7 +36,7 @@ string Book::GetPublishingCity() const
 	return this->publisher.city;
 }
 
-int Book::GetPublishingYear() const
+unsigned int Book::GetPublishingYear() const
 {
 	return this->publisher.year;
 }

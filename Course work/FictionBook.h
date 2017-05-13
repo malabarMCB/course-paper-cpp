@@ -11,16 +11,16 @@ class FictionBook: public Book
 	public:
 		FictionBook();
 
-		FictionBook(string name, string author, int pageCount, Publisher publisher, 
-			string language, string genre, int chapterCount, int volNumber);
+		FictionBook(string name, string author, unsigned int pageCount, Publisher publisher,
+			string language, string genre, unsigned int chapterCount, unsigned int volNumber);
 
 		~FictionBook();
 
 		string GetGenre() const;
 
-		int GetChapterCount() const;
+		unsigned int GetChapterCount() const;
 
-		int GetVolNumber() const;
+		unsigned int GetVolNumber() const;
 
 		friend ostream& operator<<(ostream& out, const FictionBook& book);
 

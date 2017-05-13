@@ -7,7 +7,8 @@ SchoolBook::SchoolBook()
 
 }
 
-SchoolBook::SchoolBook(string name, string author, int pageCount,Publisher publisher,string language,string subject, int classNumber,bool hasAnswers)
+SchoolBook::SchoolBook(string name, string author, unsigned int pageCount,Publisher publisher
+			,string language,string subject, unsigned int classNumber,bool hasAnswers)
 		:Book(name,author,pageCount,publisher,language),
 		subject(subject),classNumber(classNumber),hasAnswers(hasAnswers)
 {
@@ -24,7 +25,7 @@ string SchoolBook::GetSubject() const
 	return this->subject;
 }
 
-int SchoolBook::GetClassNumber() const
+unsigned int SchoolBook::GetClassNumber() const
 {
 	return this->classNumber;
 }
