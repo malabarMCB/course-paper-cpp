@@ -1,10 +1,16 @@
+/*
+*Гриневич Дмитро БС-51
+*Визначення методів класу FictionBookCreator
+*/
 #include "FictionBookCreator.h"
-
+//-------------------------------------------------------------------------
+//деструктор
 FictionBookCreator::~FictionBookCreator()
 {
 
 }
-
+//-------------------------------------------------------------------------
+//метод для створення єкземпляру типу FictionBook
 FictionBook* FictionBookCreator::Create()
 {
 	Initialize();

@@ -1,32 +1,39 @@
+/*
+*Гриневич Дмитро БС-51
+*Визначення класу SchoolBook
+*/
 #pragma once
-#include "Book.h"
+#include "Book.h"															// абстрактний клас Book
 
+// клас SchoolBook, який успадковує клас Book
 class SchoolBook:public Book
 {
 	private:
-		string subject;
-		unsigned int classNumber;
-		bool hasAnswers;
+		string subject;														// предмет з якого підручник
+		unsigned int classNumber;											// номер класу, для якого створений підручник
+		bool hasAnswers;													// є чи немає відповідей у підручнику
 
 	public:
-		SchoolBook();
+		SchoolBook();														// конструктор за замовчуванням
 
-		SchoolBook(string name, string author, unsigned int pageCount,Publisher publisher,
-			string language,string subject, unsigned int classNumber, bool hasAnswers);
+		SchoolBook(string name, string author, 
+			unsigned int pageCount,Publisher publisher,
+			string language,string subject, 
+			unsigned int classNumber, bool hasAnswers);						// конструктор з параметрами
 
-		~SchoolBook();
+		~SchoolBook();														// деструктор
 
-		string GetSubject() const;
+		string GetSubject() const;											// метод для отримання предмету з якого підручник
 
-		unsigned int GetClassNumber() const;
+		unsigned int GetClassNumber() const;								// метод для отримання номеру класу, для якого створений підручник
 
-		bool HasAnswers() const;
+		bool HasAnswers() const;											// метод для отримання інформації, є чи немає відповідей у підручнику
 
-		friend ostream& operator<<(ostream& out, const SchoolBook& book);
+		friend ostream& operator<<(ostream& out, const SchoolBook& book);	// перевантаження виводу у потік 
 
-		friend istream& operator >> (istream& in, SchoolBook& book);
+		friend istream& operator >> (istream& in, SchoolBook& book);		// перевантаження вводу з потоку
 
-		void Show() const;
+		void Show() const;													// метод для відображення книги на консоль
 
-		void Serialize(ofstream* out) const;
+		void Serialize(ofstream* out) const;								// метод для запису книги у потік
 };

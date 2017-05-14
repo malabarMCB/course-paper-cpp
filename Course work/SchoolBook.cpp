@@ -1,12 +1,17 @@
+/*
+*Гриневич Дмитро БС-51
+*Визначення методів класу SchoolBook
+*/
 #include "SchoolBook.h"
-#include "fstream"
-
-
+#include "fstream" //бібліотека для роботи з потоком
+//-------------------------------------------------------------------------
+// конструктор за замовчуванням
 SchoolBook::SchoolBook()
 {
 
 }
-
+//-------------------------------------------------------------------------
+// конструктор з параметрами
 SchoolBook::SchoolBook(string name, string author, unsigned int pageCount,Publisher publisher
 			,string language,string subject, unsigned int classNumber,bool hasAnswers)
 		:Book(name,author,pageCount,publisher,language),
@@ -14,22 +19,26 @@ SchoolBook::SchoolBook(string name, string author, unsigned int pageCount,Publis
 {
 
 }
-
+//-------------------------------------------------------------------------
+// деструктор
 SchoolBook::~SchoolBook()
 {
 
 }
-
+//-------------------------------------------------------------------------
+// метод для отримання предмету з якого підручник
 string SchoolBook::GetSubject() const
 {
 	return this->subject;
 }
-
+//-------------------------------------------------------------------------
+// метод для отримання номеру класу, для якого створений підручник
 unsigned int SchoolBook::GetClassNumber() const
 {
 	return this->classNumber;
 }
-
+//-------------------------------------------------------------------------
+// метод для відображення книги на консоль
 void SchoolBook::Show() const
 {
 	Book::Show();
@@ -38,12 +47,14 @@ void SchoolBook::Show() const
 		<< "For " << classNumber << " class" << endl;
 	cout << ((hasAnswers) ? "With answers" : "without answers")<<endl;
 }
-
+//-------------------------------------------------------------------------
+// метод для отримання інформації, є чи немає відповідей у підручнику
 bool SchoolBook::HasAnswers() const
 {
 	return this->hasAnswers;
 }
-
+//-------------------------------------------------------------------------
+// перевантаження виводу у потік
 ostream& operator<<(ostream& out, const SchoolBook& book)
 {
 	out << book.GetName() << "\n"
@@ -59,7 +70,8 @@ ostream& operator<<(ostream& out, const SchoolBook& book)
 
 	return out;
 }
-
+//-------------------------------------------------------------------------
+// перевантаження вводу з потоку
 istream& operator >> (istream& in, SchoolBook& book)
 {
 	getline(in, book.name);
@@ -82,7 +94,8 @@ istream& operator >> (istream& in, SchoolBook& book)
 
 	return in;
 }
-
+//-------------------------------------------------------------------------
+// метод для запису книги у потік
 void SchoolBook::Serialize(ofstream* out) const
 {
 	*out <<"SchoolBook" << endl;

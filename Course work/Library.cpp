@@ -1,17 +1,24 @@
+/*
+*Гриневич Дмитро БС-51
+*Визначення методів класу Library
+*/
 #include "Libraryh.h"
 #include "SchoolBook.h"
-
+//-------------------------------------------------------------------------
+// конструктор за замовчуванням
 Library::Library()
 {
 	head = NULL;
 }
-
+//-------------------------------------------------------------------------
+// деструктор
 Library::~Library()
 {
 	this->Clean();
 	delete head;
 }
-
+//-------------------------------------------------------------------------
+// метод додавання єлементу у стек
 void Library::Push(Book* book)
 {
 	Node *tmpHead = new Node;
@@ -19,7 +26,8 @@ void Library::Push(Book* book)
 	tmpHead->next = head;
 	head = tmpHead;
 }
-
+//-------------------------------------------------------------------------
+// метод видалення єлемента зі стеку
 void Library::Pop()
 {
 	if (IsEmpty())
@@ -33,12 +41,14 @@ void Library::Pop()
 
 	delete toDelete;
 }
-
+//-------------------------------------------------------------------------
+// метод, який надає інформацію про порожність стеку
 bool Library::IsEmpty() const
 {
 	return head == NULL;
 }
-
+//-------------------------------------------------------------------------
+// метод, який повертає кількість елементів у стеку
 int Library::Count() const
 {
 	int count = 0;
@@ -52,7 +62,8 @@ int Library::Count() const
 
 	return count;
 }
-
+//-------------------------------------------------------------------------
+// метод для очищення стеку
 void Library::Clean()
 {
 	if (IsEmpty())
@@ -64,7 +75,8 @@ void Library::Clean()
 	
 	head = NULL;
 }
-
+//-------------------------------------------------------------------------
+// індексатор
 Book* Library::operator [](int index) const
 {
 	if (index<0 || index>=Count())
@@ -77,7 +89,8 @@ Book* Library::operator [](int index) const
 	return current->value;
 
 }
-
+//-------------------------------------------------------------------------
+// метод для виведеня елеменів стеку на консоль
 void Library::Print() const
 {
 	if (IsEmpty())
@@ -97,14 +110,16 @@ void Library::Print() const
 		current = current->next;
 	}
 }
-
+//-------------------------------------------------------------------------
+// метод для перестановки елементів при сортуванні
 void Library::Swap(Node* left, Node* right)
 {
 	Book* tmp = left->value;
 	left->value = right->value;
 	right->value = tmp;
 }
-
+//-------------------------------------------------------------------------
+// метод для сортування елементів стеку за ім'ям
 void Library::SortByBookName()
 {
 	int count = Count();
@@ -123,7 +138,8 @@ void Library::SortByBookName()
 		}
 	}
 }
-
+//-------------------------------------------------------------------------
+// метод для виведення на консоль підручників по заданій темі(предмету)
 void Library::PrintShoolbooksWithTopic(string topic) const
 {
 	Node* current = head;

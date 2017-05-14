@@ -1,11 +1,17 @@
+/*
+*Гриневич Дмитро БС-51
+*Визначення методів класу FictionBook
+*/
 #include "FictionBook.h"
-#include "fstream"
-
+#include "fstream" //бібліотека для роботи з потоком
+//-------------------------------------------------------------------------
+// конструктор за замовчуванням
 FictionBook::FictionBook()
 {
 
 }
-
+//-------------------------------------------------------------------------
+// конструктор з параметрами
 FictionBook::FictionBook(string name, string author, unsigned int pageCount,Publisher publisher,
 	string language, string genre, unsigned int chapterCount, unsigned int volNumber)
 		:Book(name,author,pageCount,publisher,language), genre(genre),
@@ -13,22 +19,26 @@ FictionBook::FictionBook(string name, string author, unsigned int pageCount,Publ
 {
 
 }
-
+//-------------------------------------------------------------------------
+// деструктор
 FictionBook::~FictionBook()
 {
 
 }
-
+//-------------------------------------------------------------------------
+// метод для отримання жанру художньої книги
 string FictionBook::GetGenre() const
 {
 	return this->genre;
 }
-
+//-------------------------------------------------------------------------
+// метод для отримання кількості глав художньої книги
 unsigned int FictionBook::GetChapterCount() const
 {
 	return this->chapterCount;
 }
-
+//-------------------------------------------------------------------------
+// метод для відображення книги на консоль
 void FictionBook::Show() const
 {
 	Book::Show();
@@ -36,12 +46,14 @@ void FictionBook::Show() const
 		<< "Number of chapters: " << chapterCount << "\n"
 		<< "Vol number " << volNumber << endl;
 }
-
+//-------------------------------------------------------------------------
+// метод для отримання номеру тому художньої книги
 unsigned int FictionBook::GetVolNumber() const
 {
 	return this->volNumber;
 }
-
+//-------------------------------------------------------------------------
+// перевантаження виводу у потік
 ostream& operator<<(ostream& out, const FictionBook& book)
 {
 	out << book.GetName() <<"\n"
@@ -57,7 +69,8 @@ ostream& operator<<(ostream& out, const FictionBook& book)
 
 	return out;
 }
-
+//-------------------------------------------------------------------------
+// перевантаження вводу з потоку
 istream& operator>>(istream& in, FictionBook& book)
 {
 	getline(in,book.name);
@@ -80,7 +93,8 @@ istream& operator>>(istream& in, FictionBook& book)
 
 	return in;
 }
-
+//-------------------------------------------------------------------------
+// метод для запису книги у потік
 void FictionBook::Serialize(ofstream* out) const
 {
 	*out <<"FictionBook"<< endl;

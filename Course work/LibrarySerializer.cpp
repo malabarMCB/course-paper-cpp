@@ -1,13 +1,19 @@
+/*
+*Гриневич Дмитро БС-51
+*Визначення методів класу LibrarySerializer
+*/
 #include "LibrarySerializer.h"
-#include "fstream"
+#include "fstream"							//бібліотека для роботи з потоком
 #include "FictionBook.h"
 #include "SchoolBook.h"
-
+//-------------------------------------------------------------------------
+// деструктор
 LibrarySerializer::~LibrarySerializer()
 {
 
 }
-
+//-------------------------------------------------------------------------
+// метод для серіалізації колекції
 void LibrarySerializer::Serialize(Library& library, string path) const
 {
 	if (library.IsEmpty())
@@ -26,7 +32,8 @@ void LibrarySerializer::Serialize(Library& library, string path) const
 
 	cout << "Serialization completed"<<endl;
 }
-
+//-------------------------------------------------------------------------
+// метод для десеріалізації колекції
 void LibrarySerializer::Deserialize(Library* library, string path) const
 {
 	ifstream streamFromFile(path);

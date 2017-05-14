@@ -1,19 +1,26 @@
+/*
+*Гриневич Дмитро БС-51
+*Визначення методів класу Menu
+*/
 #include "Menu.h"
 #include "FictionBookCreator.h"
 #include "SchoolBookCreator.h"
-
+//-------------------------------------------------------------------------
+// конструктор за замовчуванням
 Menu::Menu()
 {
 	library = new Library;
 	serializer = new LibrarySerializer;
 }
-
+//-------------------------------------------------------------------------
+// деструктор
 Menu::~Menu()
 {
 	delete library;
 	delete serializer;
 }
-
+//-------------------------------------------------------------------------
+//метод для створення об'єкту типу SchoolBook та додавання його до колекції
 void Menu::CreateSchoolBook()
 {
 	SchoolBookCreator bookCreator;
@@ -21,7 +28,8 @@ void Menu::CreateSchoolBook()
 
 	library->Push(book);
 }
-
+//-------------------------------------------------------------------------
+//метод для створення об'єкту типу FictionBook та додавання його до колекції
 void Menu::CreateFictionBook()
 {
 	FictionBookCreator bookCreator;
@@ -29,42 +37,48 @@ void Menu::CreateFictionBook()
 
 	library->Push(book);
 }
-
+//-------------------------------------------------------------------------
+//метод для виведення колекції на консоль
 void Menu::ShowLibrary() const
 {
 	library->Print();
 }
-
+//-------------------------------------------------------------------------
+//метод для очищення колекції
 void Menu::RemoveLibrary()
 {
 	library->Clean();
 	cout << "Library cleaned" << endl;
 }
-
+//-------------------------------------------------------------------------
+//метод для запису колекції у файл
 void Menu::WriteToFile() const
 {
-	string path="collection.dat";
-	//cout << "Enter path: ";
-	//cin >> path;
+	string path;
+	cout << "Enter path: ";
+	cin >> path;
 
 	serializer->Serialize(*library, path);
 }
-
+//-------------------------------------------------------------------------
+//метод для зчитування колекції з файлу
 void Menu::ReadFormFile()
 {
-	string path = "collection.dat";
-	//cout << "Enter path: ";
-	//cin >> path;
+	string path;
+	cout << "Enter path: ";
+	cin >> path;
 
 	serializer->Deserialize(library, path);
 }
-
+//-------------------------------------------------------------------------
+//метод для сортування колеції
 void Menu::SortBooks() const
 {
 	library->SortByBookName();
 	cout << "Library sorted" << endl;
 }
-
+//-------------------------------------------------------------------------
+//метод для здійснення запиту до колекції
 void Menu::MakeRequest() const
 {
 	string topic;
@@ -72,7 +86,8 @@ void Menu::MakeRequest() const
 	cin >> topic;
 	library->PrintShoolbooksWithTopic(topic);
 }
-
+//-------------------------------------------------------------------------
+// метод для запуску меню
 void Menu::Run()
 {
 	int choise;

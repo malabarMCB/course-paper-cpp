@@ -1,10 +1,16 @@
+/*
+*Гриневич Дмитро БС-51
+*Визначення методів класу SchoolBookCreator
+*/
 #include "SchoolBookCreator.h"
-
+//-------------------------------------------------------------------------
+//деструктор
 SchoolBookCreator::~SchoolBookCreator()
 {
 
 }
-
+//-------------------------------------------------------------------------
+//метод для створення єкземпляру типу SchoolBook
 SchoolBook* SchoolBookCreator::Create()
 {
 	Initialize();
@@ -39,5 +45,4 @@ SchoolBook* SchoolBookCreator::Create()
 	} while (answer==2);
 
 	return new SchoolBook(name, author, pageCount, publisher, language, subject, classNumber, hasAnswers);
-
 }

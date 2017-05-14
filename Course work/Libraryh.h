@@ -1,39 +1,44 @@
+/*
+*Гриневич Дмитро БС-51
+*Визначення класу Library
+*/
 #pragma once
 #include "Book.h"
 
+//структура, що описує вузол стеку
 struct Node
 {
-	Book* value;
-	Node* next;
+	Book* value;											//значення, якє знаходиться у вузлі
+	Node* next;												//наступний вузол
 };
 
-//Stack
+//клас, що являє собою стек
 class Library
 {
 	private:
-		Node* head;
-		void Swap(Node* left, Node* right);
+		Node* head;											//голова стеку
+		void Swap(Node* left, Node* right);					// метод для перестановки елементів при сортуванні
 
 	public:
-		Library();
+		Library();											// конструктор за замовчуванням
 
-		~Library();
+		~Library();											// деструктор
 
-		void Push(Book* book);
+		void Push(Book* book);								// метод додавання єлементу у стек
 
-		void Pop();
+		void Pop();											// метод видалення єлемента зі стеку
 
-		bool IsEmpty() const;
+		bool IsEmpty() const;								// метод, який надає інформацію про порожність стеку
 		
-		int Count() const;
+		int Count() const;									// метод, який повертає кількість елементів у стеку
 	
-		void Clean();
+		void Clean();										// метод для очищення стеку
 
-		void Print() const;
+		void Print() const;									// метод для виведеня елеменів стеку на консоль
 
-		Book* operator [](int index) const;
+		Book* operator [](int index) const;					// індексатор
 		
-		void SortByBookName();
+		void SortByBookName();								// метод для сортування елементів стеку за ім'ям
 
-		void PrintShoolbooksWithTopic(string topic) const;
+		void PrintShoolbooksWithTopic(string topic) const; // метод для виведення на консоль підручників по заданій темі(предмету)
 };
