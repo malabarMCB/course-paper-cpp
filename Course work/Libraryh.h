@@ -40,5 +40,5 @@ class Library
 		
 		void SortByBookName();								// метод для сортування елементів стеку за ім'ям
 
-		void PrintShoolbooksWithTopic(string topic) const; // метод для виведення на консоль підручників по заданій темі(предмету)
+		int GetShoolbookCountByTopic(string topic) const;	// метод для повернення кількості підручників по заданій темі(предмету)
 };

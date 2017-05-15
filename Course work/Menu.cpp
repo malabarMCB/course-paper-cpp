@@ -84,7 +84,8 @@ void Menu::MakeRequest() const
 	string topic;
 	cout << "Enter topic" << endl;
 	cin >> topic;
-	library->PrintShoolbooksWithTopic(topic);
+
+	cout<<"Number of schoolbooks with "<<topic<<": "<<library->GetShoolbookCountByTopic(topic)<<endl;
 }
 //-------------------------------------------------------------------------
 // метод для запуску меню

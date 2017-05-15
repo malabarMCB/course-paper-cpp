@@ -35,5 +35,5 @@ class FictionBook: public Book
 
 		void Show() const;													// метод для відображення книги на консоль
 
-		void Serialize(ofstream* in) const;									// метод для запису книги у потік
+		void Serialize(ofstream* out) const;									// метод для запису книги у потік
 };

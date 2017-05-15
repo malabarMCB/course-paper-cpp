@@ -139,16 +139,19 @@ void Library::SortByBookName()
 	}
 }
 //-------------------------------------------------------------------------
-// метод для виведення на консоль підручників по заданій темі(предмету)
-void Library::PrintShoolbooksWithTopic(string topic) const
+// метод для повернення кількості підручників по заданій темі(предмету)
+int Library::GetShoolbookCountByTopic(string topic) const
 {
+	int count=0;
 	Node* current = head;
 	while (current != NULL)
 	{
 		SchoolBook* schoolBook = dynamic_cast<SchoolBook*>(current->value);
 		if (schoolBook != NULL &&  schoolBook->GetSubject() == topic)
-			schoolBook->Show();
+			count++;
 		
 		current = current->next;
 	}
+
+	return count;
 }
