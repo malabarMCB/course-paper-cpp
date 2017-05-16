@@ -2,6 +2,7 @@
 # Created by https://www.gitignore.io/api/c++,visualstudio
 
 *.doc
+*.docx
 
 ### C++ ###
 # Prerequisites
