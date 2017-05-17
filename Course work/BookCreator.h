@@ -8,9 +8,6 @@
 //абстрактний клас для фабричного методу(Factory Method)
 class BookCreator 
 {
-	private:
-		void FlushCinBuffer();			//метод для очищення буферу cin
-
 	protected:
 		string name;					//ім'я книги
 		string author;					//автор книги
@@ -18,6 +15,7 @@ class BookCreator
 		Publisher publisher;			//видавник книги
 		string language;				//мова, на якій написана книга
 
+		void FlushCin();				//метод для очищення cin
 		void Initialize();				//метод для заповнення полів
 	
 	public:

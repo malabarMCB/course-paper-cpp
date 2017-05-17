@@ -22,10 +22,18 @@ FictionBook* FictionBookCreator::Create()
 	getline(cin, genre, '\n');
 
 	cout << "Enter number of chapters: ";
-	cin >> chapterCount;
+	while (!(cin >> chapterCount) || cin.fail())
+	{
+		cout << "Please, enter correct data" << endl;
+		FlushCin();
+	}
 
 	cout << "Enter number volume number: ";
-	cin >> volNumber;
+	while (!(cin >> volNumber) || cin.fail())
+	{
+		cout << "Please, enter correct data" << endl;
+		FlushCin();
+	}
 
 	return new FictionBook(name, author, pageCount, publisher, language, genre, chapterCount, volNumber);
 }

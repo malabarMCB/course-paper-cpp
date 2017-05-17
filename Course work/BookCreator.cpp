@@ -10,10 +10,10 @@ BookCreator::~BookCreator() {
 }
 //-------------------------------------------------------------------------
 //метод для очищення буферу cin
-void BookCreator::FlushCinBuffer()
+void BookCreator::FlushCin()
 {
 	cin.clear();
-	cin.ignore(INT_MAX, '\n');
+	cin.ignore();
 }
 //-------------------------------------------------------------------------
 //метод для заповнення полів
@@ -26,12 +26,16 @@ void BookCreator::Initialize()
 	getline(cin, author, '\n');
 
 	cout << "Enter number of pages: ";
-	cin >> pageCount;
+	while (!(cin >> pageCount) || cin.fail())
+	{
+		cout << "Please, enter correct data" << endl;
+		FlushCin();
+	}
 
 	cout << "Enter language: ";
 	cin >> language;
 
-	FlushCinBuffer();
+	FlushCin();
 
 	cout << "Enter publisher company name: ";
 	getline(cin, publisher.companyName, '\n');
@@ -40,7 +44,11 @@ void BookCreator::Initialize()
 	getline(cin, publisher.city, '\n');
 
 	cout << "Enter publishing year: ";
-	cin >> publisher.year;
+	while (!(cin >> publisher.year) || cin.fail())
+	{
+		cout << "Please, enter correct data" << endl;
+		FlushCin();
+	}
 
-	FlushCinBuffer();
+	FlushCin();
 }

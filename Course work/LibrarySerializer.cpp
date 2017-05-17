@@ -51,19 +51,25 @@ void LibrarySerializer::Deserialize(Library* library, string path) const
 	getline(streamFromFile,bookType);
 	while(!streamFromFile.eof())
 	{
-		if (bookType == "FictionBook")
+		try
 		{
-			fictionBook = new FictionBook();
-			streamFromFile >> (*fictionBook);
-			library->Push(fictionBook);
+			if (bookType == "FictionBook")
+			{
+				fictionBook = new FictionBook();
+				streamFromFile >> (*fictionBook);
+				library->Push(fictionBook);
+			}
+			else if (bookType == "SchoolBook")
+			{
+				schoolBook = new SchoolBook();
+				streamFromFile >> (*schoolBook);
+				library->Push(schoolBook);
+			}
 		}
-		else if (bookType == "SchoolBook")
+		catch (...)
 		{
-			schoolBook = new SchoolBook();
-			streamFromFile >> (*schoolBook);
-			library->Push(schoolBook);
+			cout << "Unable to read one of the books" << endl;
 		}
-
 
 		getline(streamFromFile, bookType);
 	}

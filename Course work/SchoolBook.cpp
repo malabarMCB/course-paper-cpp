@@ -74,23 +74,50 @@ ostream& operator<<(ostream& out, const SchoolBook& book)
 // перевантаження вводу з потоку
 istream& operator >> (istream& in, SchoolBook& book)
 {
+	bool fail = false;
+
 	getline(in, book.name);
 	getline(in, book.author);
 
 	in >> book.pageCount;
 	in.ignore();
+	if (in.fail()) 
+	{
+		in.clear();
+		fail = true;
+	}
+
 
 	getline(in, book.publisher.city);
 	getline(in, book.publisher.companyName);
 
 	in >> book.publisher.year;
 	in.ignore();
+	if (in.fail())
+	{
+		in.clear();
+		fail = true;
+	}
 
 	getline(in, book.language);
 	getline(in, book.subject);
 	in >> book.classNumber;
+	if (in.fail())
+	{
+		in.clear();
+		fail = true;
+	}
+
 	in >> book.hasAnswers;
 	in.ignore();
+	if (in.fail())
+	{
+		in.clear();
+		fail = true;
+	}
+
+	if (fail)
+		throw exception();
 
 	return in;
 }
