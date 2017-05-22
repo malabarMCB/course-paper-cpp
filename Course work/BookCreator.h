@@ -9,17 +9,17 @@
 class BookCreator 
 {
 	protected:
-		string name;					//≥м'€ книги
-		string author;					//автор книги
-		unsigned int pageCount;			//к≥льк≥сть стор≥нок у книги
-		Publisher publisher;			//видавник книги
-		string language;				//мова, на €к≥й написана книга
+		string name;						//≥м'€ книги
+		string author;						//автор книги
+		unsigned int pageCount;				//к≥льк≥сть стор≥нок у книги
+		Publisher publisher;				//видавник книги
+		string language;					//мова, на €к≥й написана книга
 
-		void FlushCin();				//метод дл€ очищенн€ cin
-		void Initialize();				//метод дл€ заповненн€ пол≥в
+		void FlushCin() const;				//метод дл€ очищенн€ cin
+		void Initialize();					//метод дл€ заповненн€ пол≥в
 	
 	public:
-		~BookCreator();					//деструктор
+		virtual ~BookCreator();				//деструктор
 
-		virtual Book* Create()=0;		//метод дл€ створенн€ екземпл€р≥в класу пох≥дних в≥д Book
+		virtual Book* Create()=0;			//метод дл€ створенн€ екземпл€р≥в класу пох≥дних в≥д Book
 };

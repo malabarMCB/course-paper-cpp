@@ -20,7 +20,7 @@ class Book
 	protected:
 		string name;														//ім'я книги
 		string author;														//автор книги
-		unsigned int pageCount;												//кількість сторінок у книги
+		unsigned int pageCount;												//кількість сторінок у книзі
 		Publisher publisher;												//видавник книги
 		string language;													//мова, на якій написана книга
 

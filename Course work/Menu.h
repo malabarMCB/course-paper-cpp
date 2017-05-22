@@ -20,6 +20,12 @@ class Menu
 
 		void ShowLibrary() const;		//метод для виведення колекції на консоль
 
+		void RemoveLastElement();		//метод для видалення останнього елемента з колекції
+
+		void GetLibraryCount() const;	//метод для виведення на консоль кількості елементів колекції
+
+		void IsLibraryEmpty() const;	//метод для визначення, чи є колекція порожньою
+
 		void RemoveLibrary();			//метод для очищення колекції
 
 		void WriteToFile() const;		//метод для запису колекції у файл
@@ -31,7 +37,7 @@ class Menu
 		void MakeRequest() const;		//метод для здійснення запиту до колекції
 
 	public:
-		Menu();							// конструктор за замовчуванням
+		Menu();							// конструктор
 
 		~Menu();						// деструктор
 

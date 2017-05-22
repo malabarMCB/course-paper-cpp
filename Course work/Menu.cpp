@@ -89,6 +89,22 @@ void Menu::MakeRequest() const
 }
 //-------------------------------------------------------------------------
 // метод для запуску меню
+
+void Menu::RemoveLastElement()
+{
+	library->Pop();
+}
+
+void Menu::GetLibraryCount() const
+{
+	cout << "Number of books: " << library->Count()<<endl;
+}
+
+void Menu::IsLibraryEmpty() const
+{
+	cout << ((library->IsEmpty()) ? "Library is empty" : "Library isn`t empty")<<endl;
+}
+
 void Menu::Run()
 {
 	int choise;
@@ -97,15 +113,18 @@ void Menu::Run()
 	{
 		system("cls");
 		cout << "--------------------MENU--------------------" <<endl;
-		cout << "<1>. Create schoolbook`s object" <<endl;
-		cout << "<2>. Create fiction book`s object" <<endl;
-		cout << "<3>. Show the library" <<endl;
-		cout << "<4>. Remove the library" <<endl;
-		cout << "<5>. Save to file" <<endl;
-		cout << "<6>. Load from the file" <<endl;
-		cout << "<7>. Sort books" <<endl;
-		cout << "<8>. Make request" <<endl;
-		cout << "<9>. Leave the program" <<endl;
+		cout << "<1>.  Create schoolbook`s object" <<endl;
+		cout << "<2>.  Create fiction book`s object" <<endl;
+		cout << "<3>.  Show the library" <<endl;
+		cout << "<4>.  Remove last book" << endl;
+		cout << "<5>.  Show number of books in the library" << endl;
+		cout << "<6>.  Is the library empty?" << endl;
+		cout << "<7>.  Remove the library" <<endl;
+		cout << "<8>.  Save to file" <<endl;
+		cout << "<9>.  Load from the file" <<endl;
+		cout << "<10>. Sort books" <<endl;
+		cout << "<11>. Make request" <<endl;
+		cout << "<12>. Leave the program" <<endl;
 
 		cin.getline(s, 10);
 		choise = atoi(s);
@@ -135,32 +154,53 @@ void Menu::Run()
 			case 4:
 			{
 				system("cls");
-				RemoveLibrary();
+				RemoveLastElement();
 				system("pause");
 				break;
 			}
 			case 5:
 			{
 				system("cls");
-				WriteToFile();
+				GetLibraryCount();
 				system("pause");
 				break;
 			}
 			case 6:
 			{
 				system("cls");
-				ReadFormFile();
+				IsLibraryEmpty();
 				system("pause");
 				break;
 			}
 			case 7:
 			{
 				system("cls");
-				SortBooks();
+				RemoveLibrary();
 				system("pause");
 				break;
 			}
 			case 8:
+			{
+				system("cls");
+				WriteToFile();
+				system("pause");
+				break;
+			}
+			case 9:
+			{
+				system("cls");
+				ReadFormFile();
+				system("pause");
+				break;
+			}
+			case 10:
+			{
+				system("cls");
+				SortBooks();
+				system("pause");
+				break;
+			}
+			case 11:
 			{
 				system("cls");
 				MakeRequest();
@@ -169,7 +209,7 @@ void Menu::Run()
 			}
 			default:
 			{
-				if (choise < 0 || choise>9)
+				if (choise < 0 || choise>12)
 				{
 					cout << "Incorrect choise" << endl;
 					system("pause");
@@ -177,5 +217,5 @@ void Menu::Run()
 				break;
 			}
 		}
-	} while (choise != 9);
+	} while (choise != 12);
 }

@@ -10,7 +10,7 @@ BookCreator::~BookCreator() {
 }
 //-------------------------------------------------------------------------
 //метод для очищення буферу cin
-void BookCreator::FlushCin()
+void BookCreator::FlushCin() const
 {
 	cin.clear();
 	cin.ignore();
