@@ -88,23 +88,25 @@ void Menu::MakeRequest() const
 	cout<<"Number of schoolbooks with "<<topic<<": "<<library->GetShoolbookCountByTopic(topic)<<endl;
 }
 //-------------------------------------------------------------------------
-// метод для запуску меню
-
+//метод для видалення останнього елемента з колекції
 void Menu::RemoveLastElement()
 {
 	library->Pop();
 }
-
+//-------------------------------------------------------------------------
+//метод для виведення на консоль кількості елементів колекції
 void Menu::GetLibraryCount() const
 {
 	cout << "Number of books: " << library->Count()<<endl;
 }
-
+//-------------------------------------------------------------------------
+//метод для визначення, чи є колекція порожньою
 void Menu::IsLibraryEmpty() const
 {
 	cout << ((library->IsEmpty()) ? "Library is empty" : "Library isn`t empty")<<endl;
 }
-
+//-------------------------------------------------------------------------
+// метод для запуску меню
 void Menu::Run()
 {
 	int choise;
@@ -135,6 +137,7 @@ void Menu::Run()
 				system("cls");
 				CreateSchoolBook();
 				system("pause");
+				cin.ignore();
 				break;
 			}
 			case 2:
@@ -142,6 +145,7 @@ void Menu::Run()
 				system("cls");
 				CreateFictionBook();
 				system("pause");
+				cin.ignore();
 				break;
 			}
 			case 3:
@@ -184,6 +188,7 @@ void Menu::Run()
 				system("cls");
 				WriteToFile();
 				system("pause");
+				cin.ignore();
 				break;
 			}
 			case 9:
@@ -191,6 +196,7 @@ void Menu::Run()
 				system("cls");
 				ReadFormFile();
 				system("pause");
+				cin.ignore();
 				break;
 			}
 			case 10:
@@ -205,11 +211,12 @@ void Menu::Run()
 				system("cls");
 				MakeRequest();
 				system("pause");
+				cin.ignore();
 				break;
 			}
 			default:
 			{
-				if (choise < 0 || choise>12)
+				if (choise < 1 || choise>12)
 				{
 					cout << "Incorrect choise" << endl;
 					system("pause");

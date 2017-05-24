@@ -11,7 +11,7 @@ Book::Book()
 }
 //-------------------------------------------------------------------------
 // конструктор з параметрами
-Book::Book(string name, string author, unsigned int pageCount,Publisher publisher, string language)
+Book::Book(string name, string author, int pageCount,Publisher publisher, string language)
 		:name(name),author(author),pageCount(pageCount),language(language),publisher(publisher)
 {
 
@@ -24,7 +24,7 @@ Book::~Book()
 }
 //-------------------------------------------------------------------------
 // метод для отримання кількості сторінок книги
-unsigned int Book::GetPageCount() const
+int Book::GetPageCount() const
 {
 	return this->pageCount;
 }
@@ -48,7 +48,7 @@ string Book::GetPublishingCity() const
 }
 //-------------------------------------------------------------------------
 // метод для отримання дати видання книги
-unsigned int Book::GetPublishingYear() const
+int Book::GetPublishingYear() const
 {
 	return this->publisher.year;
 }

@@ -23,7 +23,7 @@ SchoolBook* SchoolBookCreator::Create()
 	getline(cin, subject, '\n');
 
 	cout << "Enter class number: ";
-	while (!(cin >> classNumber) || cin.fail())
+	while (!(cin >> classNumber) || cin.fail() || classNumber<0)
 	{
 		cout << "Please, enter correct data" << endl;
 		FlushCin();

@@ -10,22 +10,22 @@ class SchoolBook:public Book
 {
 	private:
 		string subject;														// предмет з якого підручник
-		unsigned int classNumber;											// номер класу, для якого створений підручник
+		int classNumber;													// номер класу, для якого створений підручник
 		bool hasAnswers;													// є чи немає відповідей у підручнику
 
 	public:
 		SchoolBook();														// конструктор за замовчуванням
 
 		SchoolBook(string name, string author, 
-			unsigned int pageCount,Publisher publisher,
+			int pageCount,Publisher publisher,
 			string language,string subject, 
-			unsigned int classNumber, bool hasAnswers);						// конструктор з параметрами
+			int classNumber, bool hasAnswers);								// конструктор з параметрами
 
 		~SchoolBook();														// деструктор
 
 		string GetSubject() const;											// метод для отримання предмету з якого підручник
 
-		unsigned int GetClassNumber() const;								// метод для отримання номеру класу, для якого створений підручник
+		int GetClassNumber() const;											// метод для отримання номеру класу, для якого створений підручник
 
 		bool HasAnswers() const;											// метод для отримання інформації, є чи немає відповідей у підручнику
 

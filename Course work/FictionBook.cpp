@@ -12,8 +12,8 @@ FictionBook::FictionBook()
 }
 //-------------------------------------------------------------------------
 // конструктор з параметрами
-FictionBook::FictionBook(string name, string author, unsigned int pageCount,Publisher publisher,
-	string language, string genre, unsigned int chapterCount, unsigned int volNumber)
+FictionBook::FictionBook(string name, string author, int pageCount,Publisher publisher,
+	string language, string genre,int chapterCount, int volNumber)
 		:Book(name,author,pageCount,publisher,language), genre(genre),
 		chapterCount(chapterCount),volNumber(volNumber)
 {
@@ -33,7 +33,7 @@ string FictionBook::GetGenre() const
 }
 //-------------------------------------------------------------------------
 // метод для отримання кількості глав художньої книги
-unsigned int FictionBook::GetChapterCount() const
+int FictionBook::GetChapterCount() const
 {
 	return this->chapterCount;
 }
@@ -48,7 +48,7 @@ void FictionBook::Show() const
 }
 //-------------------------------------------------------------------------
 // метод для отримання номеру тому художньої книги
-unsigned int FictionBook::GetVolNumber() const
+int FictionBook::GetVolNumber() const
 {
 	return this->volNumber;
 }
@@ -80,7 +80,7 @@ istream& operator>>(istream& in, FictionBook& book)
 
 	in >> book.pageCount;
 	in.ignore();
-	if (in.fail())
+	if (in.fail() || book.pageCount<0)
 	{
 		in.clear();
 		fail = true;
@@ -91,7 +91,7 @@ istream& operator>>(istream& in, FictionBook& book)
 
 	in >> book.publisher.year;
 	in.ignore();
-	if (in.fail())
+	if (in.fail() || book.publisher.year<0)
 	{
 		in.clear();
 		fail = true;
@@ -101,7 +101,7 @@ istream& operator>>(istream& in, FictionBook& book)
 	getline(in, book.genre);
 
 	in >> book.chapterCount;
-	if (in.fail())
+	if (in.fail() || book.chapterCount<0)
 	{
 		in.clear();
 		fail = true;
@@ -109,7 +109,7 @@ istream& operator>>(istream& in, FictionBook& book)
 
 	in >> book.volNumber;
 	in.ignore();
-	if (in.fail())
+	if (in.fail() || book.volNumber<0)
 	{
 		in.clear();
 		fail = true;

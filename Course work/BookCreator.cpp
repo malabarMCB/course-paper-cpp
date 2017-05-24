@@ -26,7 +26,7 @@ void BookCreator::Initialize()
 	getline(cin, author, '\n');
 
 	cout << "Enter number of pages: ";
-	while (!(cin >> pageCount) || cin.fail())
+	while (!(cin >> pageCount) || cin.fail() || pageCount<0)
 	{
 		cout << "Please, enter correct data" << endl;
 		FlushCin();
@@ -44,7 +44,7 @@ void BookCreator::Initialize()
 	getline(cin, publisher.city, '\n');
 
 	cout << "Enter publishing year: ";
-	while (!(cin >> publisher.year) || cin.fail())
+	while (!(cin >> publisher.year) || cin.fail() || publisher.year<0)
 	{
 		cout << "Please, enter correct data" << endl;
 		FlushCin();

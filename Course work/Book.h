@@ -10,7 +10,7 @@ using namespace std;														// простір імен std
 //структура, що описує видавника книги
 struct Publisher {
 	string city;															//місто, де була видана книга
-	unsigned int year;														//рік, коли була видана книга
+	int year;																//рік, коли була видана книга
 	string companyName;														//ім'я друкарської компанії
 };
 
@@ -20,7 +20,7 @@ class Book
 	protected:
 		string name;														//ім'я книги
 		string author;														//автор книги
-		unsigned int pageCount;												//кількість сторінок у книзі
+		int pageCount;														//кількість сторінок у книзі
 		Publisher publisher;												//видавник книги
 		string language;													//мова, на якій написана книга
 
@@ -28,7 +28,7 @@ class Book
 		Book();																// конструктор за замовчуванням
 
 		Book(string name, string author
-			, unsigned int pageCount,Publisher publisher,string language);	// конструктор з параметрами
+			,int pageCount,Publisher publisher,string language);			// конструктор з параметрами
 
 		virtual ~Book();													// деструктор
 
@@ -36,11 +36,11 @@ class Book
 
 		string GetAutor() const;											// метод для отримання автора книги
 
-		unsigned int GetPageCount() const;									// метод для отримання кількості сторінок книги
+		int GetPageCount() const;											// метод для отримання кількості сторінок книги
 
 		string GetPublishingCity() const;									// метод для отримання міста, де була видана книга
 
-		unsigned int GetPublishingYear() const;								// метод для отримання дати видання книги
+		int GetPublishingYear() const;										// метод для отримання дати видання книги
 
 		string GetPublishingCompanyName() const;							// метод для отримання ім'я компаній видавника книги
 

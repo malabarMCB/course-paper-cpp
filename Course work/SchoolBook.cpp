@@ -12,8 +12,8 @@ SchoolBook::SchoolBook()
 }
 //-------------------------------------------------------------------------
 // конструктор з параметрами
-SchoolBook::SchoolBook(string name, string author, unsigned int pageCount,Publisher publisher
-			,string language,string subject, unsigned int classNumber,bool hasAnswers)
+SchoolBook::SchoolBook(string name, string author, int pageCount,Publisher publisher
+			,string language,string subject, int classNumber,bool hasAnswers)
 		:Book(name,author,pageCount,publisher,language),
 		subject(subject),classNumber(classNumber),hasAnswers(hasAnswers)
 {
@@ -33,7 +33,7 @@ string SchoolBook::GetSubject() const
 }
 //-------------------------------------------------------------------------
 // метод для отримання номеру класу, для якого створений підручник
-unsigned int SchoolBook::GetClassNumber() const
+int SchoolBook::GetClassNumber() const
 {
 	return this->classNumber;
 }
@@ -81,7 +81,7 @@ istream& operator >> (istream& in, SchoolBook& book)
 
 	in >> book.pageCount;
 	in.ignore();
-	if (in.fail()) 
+	if (in.fail() || book.pageCount<0) 
 	{
 		in.clear();
 		fail = true;
@@ -93,7 +93,7 @@ istream& operator >> (istream& in, SchoolBook& book)
 
 	in >> book.publisher.year;
 	in.ignore();
-	if (in.fail())
+	if (in.fail() || book.publisher.year<0)
 	{
 		in.clear();
 		fail = true;
@@ -102,7 +102,7 @@ istream& operator >> (istream& in, SchoolBook& book)
 	getline(in, book.language);
 	getline(in, book.subject);
 	in >> book.classNumber;
-	if (in.fail())
+	if (in.fail() || book.classNumber<0)
 	{
 		in.clear();
 		fail = true;

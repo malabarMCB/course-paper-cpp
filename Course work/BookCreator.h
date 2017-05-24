@@ -11,7 +11,7 @@ class BookCreator
 	protected:
 		string name;						//ім'я книги
 		string author;						//автор книги
-		unsigned int pageCount;				//кількість сторінок у книги
+		int pageCount;						//кількість сторінок у книги
 		Publisher publisher;				//видавник книги
 		string language;					//мова, на якій написана книга
 
