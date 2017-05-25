@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>7</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>483</x>
-      <y>56</y>
-      <w>182</w>
-      <h>252</h>
+      <x>621</x>
+      <y>72</y>
+      <w>234</w>
+      <h>324</h>
     </coordinates>
     <panel_attributes>/Book/
 --
@@ -39,16 +39,16 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>266</x>
-      <y>63</y>
-      <w>133</w>
-      <h>77</h>
+      <x>342</x>
+      <y>81</y>
+      <w>171</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>&lt;&lt;struct&gt;&gt;
 Publisher
 --
 + city: string
-+ year: unsigned int
++ year:  int
 + companyName: string
 --
 layer=1</panel_attributes>
@@ -57,10 +57,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>91</y>
-      <w>105</w>
-      <h>28</h>
+      <x>504</x>
+      <y>117</y>
+      <w>135</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=x-
 1  #publisher 0..1
@@ -70,15 +70,15 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>252</x>
-      <y>399</y>
-      <w>301</w>
-      <h>196</h>
+      <x>324</x>
+      <y>513</y>
+      <w>387</w>
+      <h>252</h>
     </coordinates>
     <panel_attributes>FictionBook
 --
-- chapterCount: unsigned int
-- volNumber: unsigned int
+- chapterCount: int
+- volNumber: int
 --
 + FictionBook()
 + FictionBook(name: string, author: string, pageCount: int, 
@@ -98,10 +98,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>371</x>
-      <y>301</y>
-      <w>217</w>
-      <h>112</h>
+      <x>477</x>
+      <y>387</y>
+      <w>279</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 layer=2</panel_attributes>
@@ -110,19 +110,19 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>644</x>
-      <y>399</y>
-      <w>301</w>
-      <h>196</h>
+      <x>828</x>
+      <y>513</y>
+      <w>387</w>
+      <h>252</h>
     </coordinates>
     <panel_attributes>SchoolBook
 --
-- classNumber: unsigned int
+- classNumber: int
 - hasAnswers: bool
 --
 + SchoolBook()
 + SchoolBook(name: string, author: string, pageCount: int, 
-            publisher: Publisher, language: string, genre: string,
+            publisher: Publisher, language: string, subject: string,
             classNumber: int, hasAnswer: bool)
 + ~SchoolBook()
 + GetSubject(): string
@@ -138,10 +138,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>434</x>
-      <y>301</y>
-      <w>385</w>
-      <h>112</h>
+      <x>558</x>
+      <y>387</y>
+      <w>495</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 layer=2</panel_attributes>
@@ -150,10 +150,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>973</x>
-      <y>210</y>
-      <w>70</w>
-      <h>280</h>
+      <x>1251</x>
+      <y>270</y>
+      <w>90</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>string
 --
@@ -166,9 +166,9 @@ layer=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>0</x>
-      <y>84</y>
-      <w>1176</w>
-      <h>784</h>
+      <y>108</y>
+      <w>1512</w>
+      <h>1008</h>
     </coordinates>
     <panel_attributes>lt=-x
 layer=2</panel_attributes>
@@ -177,10 +177,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1750</x>
-      <y>77</y>
-      <w>147</w>
-      <h>147</h>
+      <x>2250</x>
+      <y>99</y>
+      <w>189</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>Menu
 --
@@ -203,10 +203,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1358</x>
-      <y>287</y>
-      <w>210</w>
-      <h>77</h>
+      <x>1746</x>
+      <y>369</y>
+      <w>270</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>LibrarySerializer
 --
@@ -221,10 +221,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>854</x>
-      <y>133</y>
-      <w>70</w>
-      <h>56</h>
+      <x>1098</x>
+      <y>171</y>
+      <w>90</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;struct&gt;&gt;
 Node
@@ -239,10 +239,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1568</x>
-      <y>112</y>
-      <w>196</w>
-      <h>28</h>
+      <x>2016</x>
+      <y>144</y>
+      <w>252</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=x-
 -library
@@ -252,10 +252,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1358</x>
-      <y>77</y>
-      <w>217</w>
-      <h>168</h>
+      <x>1746</x>
+      <y>99</y>
+      <w>279</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>Library
 --
@@ -280,10 +280,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>812</x>
-      <y>98</y>
-      <w>154</w>
-      <h>63</h>
+      <x>1044</x>
+      <y>126</y>
+      <w>198</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=-x
 head
@@ -293,10 +293,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>35</x>
-      <y>175</y>
-      <w>1106</w>
-      <h>665</h>
+      <x>45</x>
+      <y>225</y>
+      <w>1422</w>
+      <h>855</h>
     </coordinates>
     <panel_attributes>lt=-x
 layer=2</panel_attributes>
@@ -305,10 +305,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>385</y>
-      <w>1043</w>
-      <h>441</h>
+      <x>90</x>
+      <y>495</y>
+      <w>1341</w>
+      <h>567</h>
     </coordinates>
     <panel_attributes>lt=-x
 -genre
@@ -318,10 +318,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>917</x>
-      <y>161</y>
-      <w>455</w>
-      <h>28</h>
+      <x>1179</x>
+      <y>207</y>
+      <w>585</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 -head
@@ -331,10 +331,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1561</x>
-      <y>147</y>
-      <w>203</w>
-      <h>210</h>
+      <x>2007</x>
+      <y>189</y>
+      <w>261</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>lt=x-
 -library
@@ -344,10 +344,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
-      <y>455</y>
-      <w>490</w>
-      <h>189</h>
+      <x>783</x>
+      <y>585</y>
+      <w>630</w>
+      <h>243</h>
     </coordinates>
     <panel_attributes>lt=-x
 -subject            
@@ -357,16 +357,16 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1652</x>
-      <y>448</y>
-      <w>168</w>
-      <h>126</h>
+      <x>2124</x>
+      <y>576</y>
+      <w>216</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>/BookCreator/
 --
 # name: string
 # author: string
-# pageCount: unsigned int
+# pageCount: int
 # language: string
 --
 + ~BookCreator()
@@ -379,10 +379,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1323</x>
-      <y>651</y>
-      <w>175</w>
-      <h>56</h>
+      <x>1701</x>
+      <y>837</y>
+      <w>225</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>SchoolBookCreator
 --
@@ -396,10 +396,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1743</x>
-      <y>637</y>
-      <w>175</w>
-      <h>63</h>
+      <x>2241</x>
+      <y>819</y>
+      <w>225</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>FictionBookCreator
 --
@@ -413,10 +413,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1400</x>
-      <y>567</y>
-      <w>350</w>
-      <h>98</h>
+      <x>1800</x>
+      <y>729</y>
+      <w>450</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 layer=2</panel_attributes>
@@ -425,10 +425,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1729</x>
-      <y>567</y>
-      <w>140</w>
-      <h>84</h>
+      <x>2223</x>
+      <y>729</y>
+      <w>180</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 layer=2</panel_attributes>
@@ -437,10 +437,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>658</x>
-      <y>154</y>
-      <w>210</w>
-      <h>28</h>
+      <x>846</x>
+      <y>198</y>
+      <w>270</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-x
 +value
@@ -450,10 +450,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1036</x>
-      <y>245</y>
-      <w>336</w>
-      <h>84</h>
+      <x>1332</x>
+      <y>315</y>
+      <w>432</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -462,10 +462,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1036</x>
-      <y>273</y>
-      <w>630</w>
-      <h>245</h>
+      <x>1332</x>
+      <y>351</y>
+      <w>810</w>
+      <h>315</h>
     </coordinates>
     <panel_attributes>lt=-x
 layer=2</panel_attributes>
@@ -474,10 +474,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1323</x>
-      <y>203</y>
-      <w>294</w>
-      <h>112</h>
+      <x>1701</x>
+      <y>261</y>
+      <w>378</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -486,10 +486,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1036</x>
-      <y>203</y>
-      <w>336</w>
-      <h>42</h>
+      <x>1332</x>
+      <y>261</y>
+      <w>432</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -498,10 +498,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1659</x>
-      <y>161</y>
-      <w>294</w>
-      <h>525</h>
+      <x>2133</x>
+      <y>207</y>
+      <w>378</w>
+      <h>675</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -510,10 +510,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1365</x>
-      <y>581</y>
-      <w>70</w>
-      <h>21</h>
+      <x>1755</x>
+      <y>747</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>/Book/
 
@@ -523,10 +523,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1638</x>
-      <y>665</y>
-      <w>70</w>
-      <h>21</h>
+      <x>2106</x>
+      <y>855</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>FictionBook
 layer=1</panel_attributes>
@@ -535,10 +535,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1169</x>
-      <y>679</y>
-      <w>70</w>
-      <h>21</h>
+      <x>1503</x>
+      <y>873</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>SchoolnBook
 layer=1</panel_attributes>
@@ -547,10 +547,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1344</x>
-      <y>546</y>
-      <w>98</w>
-      <h>21</h>
+      <x>1728</x>
+      <y>702</y>
+      <w>126</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>Копія класу Book
 layer=1</panel_attributes>
@@ -559,10 +559,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1575</x>
-      <y>630</y>
-      <w>126</w>
-      <h>21</h>
+      <x>2025</x>
+      <y>810</y>
+      <w>162</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>Копія класу FictionBook
 layer=1</panel_attributes>
@@ -571,10 +571,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1197</x>
-      <y>644</y>
-      <w>119</w>
-      <h>21</h>
+      <x>1539</x>
+      <y>828</y>
+      <w>153</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>Копія класу SchoolBook
 layer=1</panel_attributes>
@@ -583,10 +583,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1232</x>
-      <y>686</y>
-      <w>105</w>
-      <h>21</h>
+      <x>1584</x>
+      <y>882</y>
+      <w>135</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -595,10 +595,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1428</x>
-      <y>525</y>
-      <w>238</w>
-      <h>77</h>
+      <x>1836</x>
+      <y>675</y>
+      <w>306</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -607,10 +607,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>658</x>
-      <y>56</y>
-      <w>1274</w>
-      <h>273</h>
+      <x>846</x>
+      <y>72</y>
+      <w>1638</w>
+      <h>351</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -619,10 +619,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1491</x>
-      <y>175</y>
-      <w>483</w>
-      <h>616</h>
+      <x>1917</x>
+      <y>225</y>
+      <w>621</w>
+      <h>792</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -631,10 +631,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1701</x>
-      <y>665</y>
-      <w>56</w>
-      <h>21</h>
+      <x>2187</x>
+      <y>855</y>
+      <w>72</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -643,10 +643,10 @@ layer=2</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1043</x>
-      <y>371</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1341</x>
+      <y>477</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>1
 style=wordwrap
@@ -656,10 +656,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>217</x>
-      <y>469</y>
-      <w>35</w>
-      <h>28</h>
+      <x>279</x>
+      <y>603</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -669,10 +669,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>623</x>
-      <y>497</y>
-      <w>35</w>
-      <h>28</h>
+      <x>801</x>
+      <y>639</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -682,10 +682,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1043</x>
-      <y>441</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1341</x>
+      <y>567</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>1
 style=wordwrap
@@ -695,10 +695,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1043</x>
-      <y>322</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1341</x>
+      <y>414</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>3
 style=wordwrap
@@ -708,10 +708,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>217</x>
-      <y>63</y>
-      <w>35</w>
-      <h>28</h>
+      <x>279</x>
+      <y>81</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -721,10 +721,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1043</x>
-      <y>294</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1341</x>
+      <y>378</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2
 style=wordwrap
@@ -734,10 +734,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>448</x>
-      <y>154</y>
-      <w>35</w>
-      <h>28</h>
+      <x>576</x>
+      <y>198</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -747,10 +747,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1316</x>
-      <y>147</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1692</x>
+      <y>189</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -760,10 +760,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>931</x>
-      <y>154</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1197</x>
+      <y>198</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>1
 style=wordwrap
@@ -773,10 +773,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>826</x>
-      <y>133</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1062</x>
+      <y>171</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>1
 style=wordwrap
@@ -786,10 +786,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>924</x>
-      <y>133</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1188</x>
+      <y>171</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -799,10 +799,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>819</x>
-      <y>147</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1053</x>
+      <y>189</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -812,10 +812,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>665</x>
-      <y>147</y>
-      <w>35</w>
-      <h>28</h>
+      <x>855</x>
+      <y>189</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>1
 style=wordwrap
@@ -825,10 +825,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1617</x>
-      <y>476</y>
-      <w>35</w>
-      <h>28</h>
+      <x>2079</x>
+      <y>612</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -838,10 +838,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1043</x>
-      <y>259</y>
-      <w>35</w>
-      <h>28</h>
+      <x>1341</x>
+      <y>333</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>3
 style=wordwrap
@@ -851,10 +851,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1715</x>
-      <y>98</y>
-      <w>35</w>
-      <h>28</h>
+      <x>2205</x>
+      <y>126</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -864,10 +864,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1575</x>
-      <y>98</y>
-      <w>35</w>
-      <h>28</h>
+      <x>2025</x>
+      <y>126</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>1
 style=wordwrap
@@ -877,10 +877,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1204</x>
-      <y>658</y>
-      <w>21</w>
-      <h>35</h>
+      <x>1548</x>
+      <y>846</y>
+      <w>27</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -889,10 +889,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1386</x>
-      <y>560</y>
-      <w>21</w>
-      <h>35</h>
+      <x>1782</x>
+      <y>720</y>
+      <w>27</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -901,10 +901,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1659</x>
-      <y>644</y>
-      <w>21</w>
-      <h>35</h>
+      <x>2133</x>
+      <y>828</y>
+      <w>27</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -913,10 +913,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>553</x>
+      <x>711</x>
       <y>0</y>
-      <w>126</w>
-      <h>35</h>
+      <w>162</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Визначення сутності
 "Друкарське видання"
@@ -927,10 +927,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
-      <y>28</y>
-      <w>21</w>
-      <h>42</h>
+      <x>774</x>
+      <y>36</y>
+      <w>27</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -939,10 +939,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>273</x>
-      <y>7</y>
-      <w>126</w>
-      <h>35</h>
+      <x>351</x>
+      <y>9</y>
+      <w>162</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Визначення видавника 
 книги
@@ -953,10 +953,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>322</x>
-      <y>35</y>
-      <w>21</w>
-      <h>42</h>
+      <x>414</x>
+      <y>45</y>
+      <w>27</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -965,10 +965,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>238</x>
-      <y>336</y>
-      <w>126</w>
-      <h>35</h>
+      <x>306</x>
+      <y>432</y>
+      <w>162</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Визначення сутності
 "Художня книга"
@@ -979,10 +979,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>364</y>
-      <w>21</w>
-      <h>49</h>
+      <x>369</x>
+      <y>468</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -991,10 +991,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>812</x>
-      <y>336</y>
-      <w>126</w>
-      <h>35</h>
+      <x>1044</x>
+      <y>432</y>
+      <w>162</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Визначення сутності
 "Підручник"
@@ -1005,10 +1005,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>861</x>
-      <y>364</y>
-      <w>21</w>
-      <h>49</h>
+      <x>1107</x>
+      <y>468</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1017,10 +1017,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>966</x>
-      <y>84</y>
-      <w>126</w>
-      <h>35</h>
+      <x>1242</x>
+      <y>108</y>
+      <w>162</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Визначення вузла стеку
 
@@ -1030,10 +1030,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>917</x>
-      <y>112</y>
-      <w>119</w>
-      <h>56</h>
+      <x>1179</x>
+      <y>144</y>
+      <w>153</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1042,10 +1042,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1197</x>
-      <y>84</y>
-      <w>112</w>
-      <h>35</h>
+      <x>1539</x>
+      <y>108</y>
+      <w>144</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Визначення колекції 
 типу стек
@@ -1056,10 +1056,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1253</x>
-      <y>112</y>
-      <w>119</w>
-      <h>49</h>
+      <x>1611</x>
+      <y>144</y>
+      <w>153</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1068,10 +1068,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1379</x>
-      <y>392</y>
-      <w>133</w>
-      <h>35</h>
+      <x>1773</x>
+      <y>504</y>
+      <w>171</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Визначення серіалізатора
 для колекції типу Library
@@ -1082,10 +1082,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1442</x>
-      <y>357</y>
-      <w>21</w>
-      <h>49</h>
+      <x>1854</x>
+      <y>459</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1094,10 +1094,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1750</x>
-      <y>252</y>
-      <w>133</w>
-      <h>35</h>
+      <x>2250</x>
+      <y>324</y>
+      <w>171</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Визначення меню 
 користувача
@@ -1108,10 +1108,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1813</x>
-      <y>217</y>
-      <w>21</w>
-      <h>49</h>
+      <x>2331</x>
+      <y>279</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1120,10 +1120,10 @@ layer=2</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1715</x>
-      <y>133</y>
-      <w>35</w>
-      <h>28</h>
+      <x>2205</x>
+      <y>171</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>0..1
 style=wordwrap
@@ -1133,10 +1133,10 @@ layer=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1568</x>
-      <y>322</y>
-      <w>35</w>
-      <h>28</h>
+      <x>2016</x>
+      <y>414</y>
+      <w>45</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>1
 style=wordwrap
@@ -1146,10 +1146,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1442</x>
-      <y>448</y>
-      <w>133</w>
-      <h>42</h>
+      <x>1854</x>
+      <y>576</y>
+      <w>171</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Визначення для класу,
 що визначає фабричний 
@@ -1161,10 +1161,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1568</x>
-      <y>462</y>
-      <w>98</w>
-      <h>21</h>
+      <x>2016</x>
+      <y>594</y>
+      <w>126</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1173,10 +1173,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1764</x>
-      <y>728</y>
-      <w>133</w>
-      <h>42</h>
+      <x>2268</x>
+      <y>936</y>
+      <w>171</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Визначення для класу,
 що реалізує фабричний 
@@ -1188,10 +1188,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1820</x>
-      <y>693</y>
-      <w>21</w>
-      <h>49</h>
+      <x>2340</x>
+      <y>891</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1200,10 +1200,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1344</x>
-      <y>735</y>
-      <w>133</w>
-      <h>42</h>
+      <x>1728</x>
+      <y>945</y>
+      <w>171</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Визначення для класу,
 що реалізує фабричний 
@@ -1215,10 +1215,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1407</x>
-      <y>700</y>
-      <w>21</w>
-      <h>49</h>
+      <x>1809</x>
+      <y>900</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1227,10 +1227,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>805</x>
-      <y>238</y>
-      <w>126</w>
-      <h>35</h>
+      <x>1035</x>
+      <y>306</y>
+      <w>162</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Клас для роботи зі 
 строками
@@ -1241,10 +1241,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>924</x>
-      <y>252</y>
-      <w>63</w>
-      <h>21</h>
+      <x>1188</x>
+      <y>324</y>
+      <w>81</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1253,10 +1253,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
-      <y>693</y>
-      <w>70</w>
-      <h>42</h>
+      <x>108</x>
+      <y>891</y>
+      <w>90</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>ostream
 --
@@ -1268,10 +1268,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>343</x>
-      <y>616</y>
-      <w>70</w>
-      <h>42</h>
+      <x>441</x>
+      <y>792</y>
+      <w>90</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>istream
 --
@@ -1283,10 +1283,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>406</x>
-      <y>413</y>
-      <w>252</w>
-      <h>252</h>
+      <x>522</x>
+      <y>531</y>
+      <w>324</w>
+      <h>324</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -1295,10 +1295,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>147</x>
-      <y>483</y>
-      <w>511</w>
-      <h>322</h>
+      <x>189</x>
+      <y>621</y>
+      <w>657</w>
+      <h>414</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -1307,10 +1307,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>147</x>
-      <y>525</y>
-      <w>119</w>
-      <h>189</h>
+      <x>189</x>
+      <y>675</y>
+      <w>153</w>
+      <h>243</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -1319,10 +1319,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>231</x>
-      <y>574</y>
-      <w>210</w>
-      <h>70</h>
+      <x>297</x>
+      <y>738</y>
+      <w>270</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -1331,10 +1331,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>651</y>
-      <w>70</w>
-      <h>42</h>
+      <x>261</x>
+      <y>837</y>
+      <w>90</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>ofstream
 --
@@ -1346,10 +1346,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>553</y>
-      <w>98</w>
-      <h>119</h>
+      <x>270</x>
+      <y>711</y>
+      <w>126</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -1358,10 +1358,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>266</x>
-      <y>434</y>
-      <w>392</w>
-      <h>259</h>
+      <x>342</x>
+      <y>558</y>
+      <w>504</w>
+      <h>333</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -1370,10 +1370,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>462</x>
-      <y>609</y>
-      <w>91</w>
-      <h>35</h>
+      <x>594</x>
+      <y>783</y>
+      <w>117</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Клас для роботи
 з потоком вводу
@@ -1384,10 +1384,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>406</x>
-      <y>630</y>
-      <w>70</w>
-      <h>21</h>
+      <x>522</x>
+      <y>810</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1396,10 +1396,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>294</x>
-      <y>686</y>
-      <w>119</w>
-      <h>35</h>
+      <x>378</x>
+      <y>882</y>
+      <w>153</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Клас для роботи з 
 потоком виводу в файл
@@ -1410,10 +1410,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>231</x>
-      <y>686</y>
-      <w>77</w>
-      <h>35</h>
+      <x>297</x>
+      <y>882</y>
+      <w>99</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1422,10 +1422,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>84</x>
-      <y>763</y>
-      <w>91</w>
-      <h>35</h>
+      <x>108</x>
+      <y>981</y>
+      <w>117</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Клас для роботи
 з потоком виводу
@@ -1437,10 +1437,10 @@ layer=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>112</x>
-      <y>728</y>
-      <w>21</w>
-      <h>49</h>
+      <x>144</x>
+      <y>936</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1449,10 +1449,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1211</x>
-      <y>350</y>
-      <w>70</w>
-      <h>42</h>
+      <x>1557</x>
+      <y>450</y>
+      <w>90</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>ofstream
 --
@@ -1464,10 +1464,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1204</x>
-      <y>294</y>
-      <w>70</w>
-      <h>35</h>
+      <x>1548</x>
+      <y>378</y>
+      <w>90</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Копія класу 
 ofstream
@@ -1478,10 +1478,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1225</x>
-      <y>322</y>
-      <w>21</w>
-      <h>42</h>
+      <x>1575</x>
+      <y>414</y>
+      <w>27</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1490,10 +1490,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1274</x>
-      <y>329</y>
-      <w>98</w>
-      <h>56</h>
+      <x>1638</x>
+      <y>423</y>
+      <w>126</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -1502,10 +1502,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1204</x>
-      <y>420</y>
-      <w>70</w>
-      <h>42</h>
+      <x>1548</x>
+      <y>540</y>
+      <w>90</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>ifstream
 --
@@ -1517,10 +1517,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1295</x>
-      <y>455</y>
-      <w>119</w>
-      <h>35</h>
+      <x>1665</x>
+      <y>585</y>
+      <w>153</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Клас для роботи з 
 потоком вводу з файлу
@@ -1531,10 +1531,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1232</x>
-      <y>455</y>
-      <w>77</w>
-      <h>35</h>
+      <x>1584</x>
+      <y>585</y>
+      <w>99</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>
@@ -1543,10 +1543,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1267</x>
-      <y>343</y>
-      <w>105</w>
-      <h>105</h>
+      <x>1629</x>
+      <y>441</y>
+      <w>135</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -1555,10 +1555,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>742</y>
-      <w>70</w>
-      <h>42</h>
+      <x>423</x>
+      <y>954</y>
+      <w>90</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>exception
 --
@@ -1570,10 +1570,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>182</x>
-      <y>539</y>
-      <w>259</w>
-      <h>231</h>
+      <x>234</x>
+      <y>693</y>
+      <w>333</w>
+      <h>297</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>310.0;310.0;350.0;310.0;350.0;270.0;50.0;270.0;50.0;230.0;10.0;230.0;10.0;10.0;100.0;10.0</additional_attributes>
@@ -1581,10 +1581,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>455</y>
-      <w>266</w>
-      <h>329</h>
+      <x>504</x>
+      <y>585</y>
+      <w>342</w>
+      <h>423</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=2</panel_attributes>
@@ -1593,10 +1593,10 @@ layer=2</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>210</x>
-      <y>742</y>
-      <w>98</w>
-      <h>35</h>
+      <x>270</x>
+      <y>954</y>
+      <w>126</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Клас для роботи з 
 виключеннями
@@ -1607,10 +1607,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
-      <y>756</y>
-      <w>42</w>
-      <h>21</h>
+      <x>387</x>
+      <y>972</y>
+      <w>54</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=2</panel_attributes>

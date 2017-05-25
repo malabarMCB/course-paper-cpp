@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>7</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: FictionBook
+--
+name: string= "The Hunger Games"
+author: string= "Suzanne Collins"
+pageCount: int= 374
+language: string="English"
+publisher.city: string="New-York"
+publisher.year: int=2008
+publisher.companyName: string="Scholastic"
+genre: string= "Adventure"
+chapterCount: int=1
+volNumber: int=1
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>301</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: FictionBook
+--
+name: string= "To Kill a Mockingbird"
+author: string= "Lee"
+pageCount: int= 324
+language: string="English"
+publisher.city: string="New-York"
+publisher.year: int=2006
+publisher.companyName: string="Harper"
+genre: string= "Novel"
+chapterCount: int=5
+volNumber: int=1
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>154</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: FictionBook
+--
+name: string= "Harry Potter"
+author: string= "Rowling"
+pageCount: int= 870
+language: string="English"
+publisher.city: string="London"
+publisher.year: int=2004
+publisher.companyName: string="Scholastic"
+genre: string= "Fantasy"
+chapterCount: int=17
+volNumber: int=15
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>455</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: FictionBook
+--
+name: string= "Twilight"
+author: string= "Meyer"
+pageCount: int= 498
+language: string="English"
+publisher.city: string="Toronto"
+publisher.year: int=2006
+publisher.companyName: string="Brown"
+genre: string= "Fantasy"
+chapterCount: int=3
+volNumber: int=7
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>609</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: FictionBook
+--
+name: string= "The Book Thief"
+author: string= "Zusak"
+pageCount: int= 552
+language: string="English"
+publisher.city: string="Manchster"
+publisher.year: int=2006
+publisher.companyName: string="Kaene"
+genre: string= "Novel"
+chapterCount: int=1
+volNumber: int=1
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>602</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: ScoolBook
+--
+name: string= "Russian"
+author: string= "Sidorov"
+pageCount: int= 96
+language: string="Russian"
+publisher.city: string="Odessa"
+publisher.year: int=2009
+publisher.companyName: string="Study"
+subject: string= "Russian"
+classNumber: int=3
+hasAnswers: bool=0
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>0</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: ScoolBook
+--
+name: string= "Math 5 class"
+author: string= "Irodov"
+pageCount: int= 521
+language: string="Ukrainian"
+publisher.city: string="Kiev"
+publisher.year: int=1995
+publisher.companyName: string="Knowladge"
+subject: string= "Math"
+classNumber: int=5
+hasAnswers: bool=1
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>147</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: ScoolBook
+--
+name: string= "English 9 class"
+author: string= "Karpuk"
+pageCount: int= 120
+language: string="English"
+publisher.city: string="Kiev"
+publisher.year: int=2007
+publisher.companyName: string="Knowladge"
+subject: string= "English"
+classNumber: int=9
+hasAnswers: bool=0
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>294</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: ScoolBook
+--
+name: string= "Music"
+author: string= "Petrov"
+pageCount: int= 50
+language: string="Russian"
+publisher.city: string="Kharkov"
+publisher.year: int=2010
+publisher.companyName: string="Book"
+subject: string= "Music"
+classNumber: int=1
+hasAnswers: bool=0
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>455</y>
+      <w>280</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>: ScoolBook
+--
+name: string= "Ukrainian 7"
+author: string= "Ivanov"
+pageCount: int= 140
+language: string="Ukrainian"
+publisher.city: string="Kharkov"
+publisher.year: int=2016
+publisher.companyName: string="Book"
+subject: string= "Ukrainian"
+classNumber: int=7
+hasAnswers: bool=1
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>294</y>
+      <w>98</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Library</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>84</y>
+      <w>119</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0;100.0;340.0;150.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>224</y>
+      <w>84</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>315</y>
+      <w>119</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;520.0;100.0;520.0;100.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>378</y>
+      <w>84</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>518</y>
+      <w>84</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>469</x>
+      <y>91</y>
+      <w>70</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>80.0;10.0;40.0;10.0;40.0;340.0;10.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>469</x>
+      <y>322</y>
+      <w>70</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>80.0;500.0;40.0;500.0;40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>245</y>
+      <w>49</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>350</y>
+      <w>49</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>532</y>
+      <w>49</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+</diagram>

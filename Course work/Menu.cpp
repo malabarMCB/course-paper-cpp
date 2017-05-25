@@ -55,9 +55,10 @@ void Menu::RemoveLibrary()
 void Menu::WriteToFile() const
 {
 	string path;
-	cout << "Enter path: ";
-	cin >> path;
-
+	cout << "Enter file name: ";
+	getline(cin, path);
+	cin.clear();
+	
 	serializer->Serialize(*library, path);
 }
 //-------------------------------------------------------------------------
@@ -65,8 +66,9 @@ void Menu::WriteToFile() const
 void Menu::ReadFormFile()
 {
 	string path;
-	cout << "Enter path: ";
-	cin >> path;
+	cout << "Enter file name: ";
+	getline(cin, path);
+	cin.clear();
 
 	serializer->Deserialize(library, path);
 }
@@ -82,8 +84,9 @@ void Menu::SortBooks() const
 void Menu::MakeRequest() const
 {
 	string topic;
-	cout << "Enter topic" << endl;
-	cin >> topic;
+	cout << "Enter topic: ";
+	getline(cin, topic);
+	cin.clear();
 
 	cout<<"Number of schoolbooks with "<<topic<<": "<<library->GetShoolbookCountByTopic(topic)<<endl;
 }
@@ -188,7 +191,6 @@ void Menu::Run()
 				system("cls");
 				WriteToFile();
 				system("pause");
-				cin.ignore();
 				break;
 			}
 			case 9:
@@ -196,7 +198,6 @@ void Menu::Run()
 				system("cls");
 				ReadFormFile();
 				system("pause");
-				cin.ignore();
 				break;
 			}
 			case 10:
@@ -211,7 +212,6 @@ void Menu::Run()
 				system("cls");
 				MakeRequest();
 				system("pause");
-				cin.ignore();
 				break;
 			}
 			default:
